@@ -72,10 +72,11 @@ func _defineElementos():
 		elemento[3]._setup(randi() % numOpcoes)
 	
 	#Define as imagens dos botões
-	$btn0.set_button_icon(load(imagemPath + str(elemento[0]._getIndex()) + ".png"))
-	$btn1.set_button_icon(load(imagemPath + str(elemento[1]._getIndex()) + ".png"))
-	$btn2.set_button_icon(load(imagemPath + str(elemento[2]._getIndex()) + ".png"))
-	$btn3.set_button_icon(load(imagemPath + str(elemento[3]._getIndex()) + ".png"))
+	for i in numBotoes:
+		get_node("btn" + str(i)).set_button_icon(load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
+#	$btn1.set_button_icon(load(imagemPath + str(elemento[1]._getIndex()) + ".png"))
+#	$btn2.set_button_icon(load(imagemPath + str(elemento[2]._getIndex()) + ".png"))
+#	$btn3.set_button_icon(load(imagemPath + str(elemento[3]._getIndex()) + ".png"))
 	
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % 4
@@ -136,8 +137,12 @@ func _on_timFim_timeout():
 func _desabilitaBotoes():
 	for i in numBotoes:
 		get_node("btn" + str(i)).set("disabled", true)
+	$btnOuvir.set("disabled", true)
+	$btnVoltar.set("disabled", true)
 
 func _habilitaBotoes():
 	for i in numBotoes:
 		get_node("btn" + str(i)).set("disabled", false)
 		get_node("btn"+str(i)).set("modulate","ffffffff")
+		$btnOuvir.set("disabled", false)
+		$btnVoltar.set("disabled", false)
