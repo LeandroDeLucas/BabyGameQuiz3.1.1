@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/11.wav-185c24552ec8df327d26848cef0b00ca.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Letras/ptBr/11.wav"
+dest_files=[ "res://.import/11.wav-185c24552ec8df327d26848cef0b00ca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

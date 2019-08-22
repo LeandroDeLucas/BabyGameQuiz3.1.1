@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/3.wav-f9b01839eb54fd5e93c832c5a21c79e9.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/ptBr/3.wav"
+dest_files=[ "res://.import/3.wav-f9b01839eb54fd5e93c832c5a21c79e9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

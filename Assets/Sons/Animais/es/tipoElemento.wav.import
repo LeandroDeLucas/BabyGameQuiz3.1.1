@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tipoElemento.wav-81d670970b3db2e266c99226a6dcaec6.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/es/tipoElemento.wav"
+dest_files=[ "res://.import/tipoElemento.wav-81d670970b3db2e266c99226a6dcaec6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

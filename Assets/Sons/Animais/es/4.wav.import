@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/4.wav-0b1a748aa846853091a110b9af2a0230.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/es/4.wav"
+dest_files=[ "res://.import/4.wav-0b1a748aa846853091a110b9af2a0230.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
