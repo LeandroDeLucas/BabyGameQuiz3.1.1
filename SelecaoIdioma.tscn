@@ -1,0 +1,114 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://SelecaoIdioma.gd" type="Script" id=1]
+[ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Imagens/flagBrasil.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Imagens/flagEspanha.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Imagens/flagEUA.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Sons/click.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Sons/bg.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Imagens/btnMuteBg.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 6 )
+
+[node name="selecaoIdioma" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fundo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 409.815, 240 )
+
+[node name="rtgSelecao" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.831373 )
+margin_left = 91.4409
+margin_top = 238.815
+margin_right = 249.441
+margin_bottom = 345.815
+rect_pivot_offset = Vector2( 78.5997, 52.2761 )
+
+[node name="btnPortugues" type="Button" parent="."]
+margin_left = 90.0
+margin_top = 240.0
+margin_right = 252.0
+margin_bottom = 345.815
+icon = ExtResource( 3 )
+flat = true
+
+[node name="btnEspanhol" type="Button" parent="."]
+margin_left = 328.471
+margin_top = 240.279
+margin_right = 490.471
+margin_bottom = 346.279
+icon = ExtResource( 4 )
+flat = true
+
+[node name="btnIngles" type="Button" parent="."]
+margin_left = 557.936
+margin_top = 237.021
+margin_right = 719.936
+margin_bottom = 343.021
+icon = ExtResource( 5 )
+flat = true
+
+[node name="lblMensagem" type="Label" parent="."]
+margin_left = -0.492676
+margin_top = 66.6623
+margin_right = 816.507
+margin_bottom = 125.662
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.145098, 0.423529, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "ESCOLHA O IDIOMA"
+align = 1
+valign = 1
+
+[node name="btnOk" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 261.726
+margin_top = 407.25
+margin_right = 568.726
+margin_bottom = 455.25
+custom_fonts/font = SubResource( 2 )
+text = "PRÓXIMO ->"
+
+[node name="somClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="somBg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="btnBg" type="Button" parent="."]
+margin_left = 732.169
+margin_top = 16.3305
+margin_right = 794.169
+margin_bottom = 72.3305
+icon = ExtResource( 9 )
+flat = true
+
+[node name="btnSair" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 424.0
+margin_right = 105.0
+margin_bottom = 465.0
+custom_fonts/font = SubResource( 3 )
+text = "SAIR"
+[connection signal="pressed" from="btnPortugues" to="." method="_on_btnPortugues_pressed"]
+[connection signal="pressed" from="btnEspanhol" to="." method="_on_btnEspanhol_pressed"]
+[connection signal="pressed" from="btnIngles" to="." method="_on_btnIngles_pressed"]
+[connection signal="pressed" from="btnOk" to="." method="_on_btnOk_pressed"]
+[connection signal="finished" from="somBg" to="." method="_on_somBg_finished"]
+[connection signal="pressed" from="btnBg" to="." method="_on_btnBg_pressed"]
+[connection signal="pressed" from="btnSair" to="." method="_on_btnSair_pressed"]
