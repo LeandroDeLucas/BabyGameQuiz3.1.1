@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Final.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Imagens/Animacao/balloon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Imagens/Animacao/tail1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Imagens/Animacao/tail2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Imagens/Animacao/tail3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sons/Animacao/balloonPop.wav" type="AudioStream" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="Baloon" type="Node2D"]
+position = Vector2( 2.58472, 1.29237 )
+script = ExtResource( 1 )
+
+[node name="balloon" type="TextureButton" parent="."]
+margin_left = 233.411
+margin_top = 479.71
+margin_right = 313.411
+margin_bottom = 581.71
+action_mode = 0
+texture_normal = ExtResource( 2 )
+
+[node name="tail" type="AnimatedSprite" parent="balloon"]
+position = Vector2( 40.6588, 121.43 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="pop" type="AudioStreamPlayer" parent="balloon"]
+stream = ExtResource( 6 )
+[connection signal="pressed" from="balloon" to="." method="_on_balloon_pressed"]
+[connection signal="ready" from="balloon" to="." method="_on_balloon_ready"]
