@@ -26,7 +26,6 @@ font_data = ExtResource( 6 )
 script = ExtResource( 1 )
 
 [node name="fundo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 409.815, 240 )
 
 [node name="rtgSelecao" type="ColorRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0.831373 )

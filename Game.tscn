@@ -97,7 +97,8 @@ margin_bottom = 316.453
 icon = ExtResource( 7 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]
-position = Vector2( 410, 675 )
+position = Vector2( 387.285, 616.274 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 2 )
 
 [node name="timFim" type="Timer" parent="."]

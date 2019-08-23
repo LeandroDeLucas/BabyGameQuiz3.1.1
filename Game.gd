@@ -123,7 +123,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	if move == true and $aniAudiencia.position.y > 280:
+	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
 func _on_btnOuvir_pressed():
@@ -149,6 +149,6 @@ func _baloes():
 	var balao = preload("res://Ballon.tscn")
 	for i in 25:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-200,500)
+		baloes.position.x = rand_range(-400,400)
 		add_child(baloes)
 		
