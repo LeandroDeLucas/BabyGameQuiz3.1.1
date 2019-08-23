@@ -149,6 +149,6 @@ func _baloes():
 	var balao = preload("res://Ballon.tscn")
 	for i in 25:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-300,300)
+		baloes.position.x = rand_range(-200,500)
 		add_child(baloes)
 		
