@@ -79,8 +79,7 @@ func _defineElementos():
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
 	$somElemento.stream = load(somPath + lingua + "/" + str(elemento[respostaCerta]._getIndex()) + ".wav")
-	$Label.text =  somPath + lingua + "/tipoElemento.wav"
-	
+		
 func _on_btn0_pressed():
 	_verifica(0)
 
@@ -147,8 +146,8 @@ func _habilitaBotoes():
 
 func _baloes():
 	var balao = preload("res://Ballon.tscn")
-	for i in 25:
+	for i in 20:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-400,400)
+		baloes.position.x = rand_range(-400,380)
 		add_child(baloes)
 		

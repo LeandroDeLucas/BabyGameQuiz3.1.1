@@ -105,10 +105,6 @@ frames = SubResource( 2 )
 wait_time = 5.0
 one_shot = true
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-
 [node name="somErro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 pitch_scale = 2.0
