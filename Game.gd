@@ -74,10 +74,7 @@ func _defineElementos():
 	#Define as imagens dos botões
 	for i in numBotoes:
 		get_node("btn" + str(i)).set_button_icon(load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
-#	$btn1.set_button_icon(load(imagemPath + str(elemento[1]._getIndex()) + ".png"))
-#	$btn2.set_button_icon(load(imagemPath + str(elemento[2]._getIndex()) + ".png"))
-#	$btn3.set_button_icon(load(imagemPath + str(elemento[3]._getIndex()) + ".png"))
-	
+#		
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
@@ -107,6 +104,7 @@ func _verifica(var resposta):
 		move = true
 		$somAudiencia.play()
 		$timFim.start()
+		_baloes()
 	else:
 		#resposta errada
 		$somErro.play()
@@ -146,3 +144,11 @@ func _habilitaBotoes():
 		get_node("btn"+str(i)).set("modulate","ffffffff")
 		$btnOuvir.set("disabled", false)
 		$btnVoltar.set("disabled", false)
+
+func _baloes():
+	var balao = preload("res://Ballon.tscn")
+	for i in 25:
+		var baloes = balao.instance()
+		baloes.position.x = rand_range(-300,300)
+		add_child(baloes)
+		
