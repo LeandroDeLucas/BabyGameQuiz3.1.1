@@ -11,6 +11,7 @@ var lingua: String #= "ptBr"
 var elemento = [Elemento.new(),Elemento.new(),Elemento.new(),Elemento.new()]
 
 var respostaCerta: int
+var elementoUltimoSorteio = Elemento.new()
 var move = false
 
 func _ready():
@@ -61,14 +62,16 @@ func _defineJogo(jogo):
 func _defineElementos():
 	#Sorteia os elementos da rodada
 	elemento[0]._setup(randi() % numOpcoes)
+	while elemento[0]._getIndex() == elementoUltimoSorteio._getIndex(): #Evita que a resposta certa da última rodada apareça em jogo
+		elemento[0]._setup(randi() % numOpcoes)
 	elemento[1]._setup(randi() % numOpcoes)
-	while (elemento[0]._getIndex() == elemento[1]._getIndex()):
+	while (elemento[0]._getIndex() == elemento[1]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[1]._setup(randi() % numOpcoes)
 	elemento[2]._setup(randi() % numOpcoes)
-	while (elemento[2]._getIndex() == elemento[0]._getIndex()) or (elemento[2]._getIndex() == elemento[1]._getIndex()):
+	while (elemento[2]._getIndex() == elemento[0]._getIndex()) or (elemento[2]._getIndex() == elemento[1]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[2]._setup(randi() % numOpcoes)
 	elemento[3]._setup(randi() % numOpcoes)
-	while (elemento[3]._getIndex() == elemento[0]._getIndex()) or (elemento[3]._getIndex() == elemento[1]._getIndex()) or (elemento[3]._getIndex() == elemento[2]._getIndex()):
+	while (elemento[3]._getIndex() == elemento[0]._getIndex()) or (elemento[3]._getIndex() == elemento[1]._getIndex()) or (elemento[3]._getIndex() == elemento[2]._getIndex() or elemento[3]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[3]._setup(randi() % numOpcoes)
 	
 	#Define as imagens dos botões
@@ -79,7 +82,8 @@ func _defineElementos():
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
 	$somElemento.stream = load(somPath + lingua + "/" + str(elemento[respostaCerta]._getIndex()) + ".wav")
-		
+	elementoUltimoSorteio._setup(elemento[respostaCerta]._getIndex())
+	
 func _on_btn0_pressed():
 	_verifica(0)
 
