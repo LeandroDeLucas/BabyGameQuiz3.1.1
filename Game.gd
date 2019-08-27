@@ -145,8 +145,8 @@ func _habilitaBotoes():
 	for i in numBotoes:
 		get_node("btn" + str(i)).set("disabled", false)
 		get_node("btn"+str(i)).set("modulate","ffffffff")
-		$btnOuvir.set("disabled", false)
-		$btnVoltar.set("disabled", false)
+	$btnOuvir.set("disabled", false)
+	$btnVoltar.set("disabled", false)
 
 func _baloes():
 	var balao = preload("res://Ballon.tscn")
