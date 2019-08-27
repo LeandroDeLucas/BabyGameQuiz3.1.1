@@ -13,6 +13,7 @@ var elemento = [Elemento.new(),Elemento.new(),Elemento.new(),Elemento.new()]
 var respostaCerta: int
 var elementoUltimoSorteio = Elemento.new()
 var move = false
+var score:int
 
 func _ready():
 	randomize()
@@ -107,12 +108,16 @@ func _verifica(var resposta):
 		move = true
 		$somAudiencia.play()
 		$timFim.start()
-		_baloes()
+		score = score + 1
+		if score >= 4:
+			_baloes()
+			score = 0
 	else:
 		#resposta errada
 		$somErro.play()
 		get_node("btn"+str(resposta)).set("disaled",true)
 		get_node("btn"+str(resposta)).set("modulate","3e3e3e")
+		score = 0
 	
 func _on_btnVoltar_pressed():
 	self.get_parent().call("_habilita_botoes")
@@ -126,7 +131,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	if move == true and $aniAudiencia.position.y > 400:
+	if move == true and $aniAudiencia.position.y > 310:
 		$aniAudiencia.move_local_y(-25, true)
 
 func _on_btnOuvir_pressed():
@@ -150,6 +155,7 @@ func _habilitaBotoes():
 
 func _baloes():
 	var balao = preload("res://Ballon.tscn")
+	$somFim.play()
 	for i in 20:
 		var baloes = balao.instance()
 		baloes.position.x = rand_range(-400,380)

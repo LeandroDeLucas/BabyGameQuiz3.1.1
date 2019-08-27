@@ -1,14 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Sons/Animais/ptBr/6.wav" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Imagens/btnOuvir.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Imagens/btnOuvir.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Sons/Animais/ptBr/6.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -76,47 +77,50 @@ margin_bottom = 439.591
 custom_fonts/font = SubResource( 1 )
 text = "<- Voltar"
 
+[node name="btnOuvir" type="Button" parent="."]
+margin_left = 102.028
+margin_top = 190.453
+margin_right = 185.028
+margin_bottom = 316.453
+icon = ExtResource( 4 )
+
 [node name="somOndeEsta" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
+
+[node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
 
 [node name="somElemento" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 
 [node name="somRespostaCerta" type="AudioStreamPlayer" parent="."]
 
 [node name="somRespostaErrada" type="AudioStreamPlayer" parent="."]
 
 [node name="somAudiencia" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-
-[node name="btnOuvir" type="Button" parent="."]
-margin_left = 102.028
-margin_top = 190.453
-margin_right = 185.028
-margin_bottom = 316.453
-icon = ExtResource( 7 )
+stream = ExtResource( 7 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]
-position = Vector2( 387.285, 616.274 )
-scale = Vector2( 0.7, 0.7 )
+position = Vector2( 406.187, 670 )
+scale = Vector2( 0.873382, 0.965306 )
 frames = SubResource( 2 )
 
 [node name="timFim" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="somErro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 pitch_scale = 2.0
 
-[node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
+[node name="somFim" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="tree_entered" from="." to="." method="_on_GameAnimais_tree_entered"]
 [connection signal="pressed" from="btn0" to="." method="_on_btn0_pressed"]
 [connection signal="pressed" from="btn1" to="." method="_on_btn1_pressed"]
 [connection signal="pressed" from="btn2" to="." method="_on_btn2_pressed"]
 [connection signal="pressed" from="btn3" to="." method="_on_btn3_pressed"]
 [connection signal="pressed" from="btnVoltar" to="." method="_on_btnVoltar_pressed"]
-[connection signal="finished" from="somOndeEsta" to="." method="_on_somOndeEsta_finished"]
 [connection signal="pressed" from="btnOuvir" to="." method="_on_btnOuvir_pressed"]
-[connection signal="timeout" from="timFim" to="." method="_on_timFim_timeout"]
+[connection signal="finished" from="somOndeEsta" to="." method="_on_somOndeEsta_finished"]
 [connection signal="finished" from="somTipoElemento" to="." method="_on_somTipoElemento_finished"]
+[connection signal="timeout" from="timFim" to="." method="_on_timFim_timeout"]
