@@ -25,7 +25,7 @@ func _on_btnEspanhol_pressed():
 	$rtgSelecao.margin_left = $btnEspanhol.margin_left
 	$rtgSelecao.margin_right = $rtgSelecao.margin_left + 162
 	$lblMensagem.text = "ELIGE EL IDIOMA"
-	$btnOk.text = "SEGUIENTE ->"
+	$btnOk.text = "ADELANTE ->"
 	$btnSair.text = "SALIR"
 	$btnPortugues.set_modulate("a4a4a4")
 	$btnEspanhol.set_modulate("ffffffff")

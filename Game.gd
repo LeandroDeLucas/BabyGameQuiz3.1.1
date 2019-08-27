@@ -20,8 +20,9 @@ func _ready():
 	_novo_jogo()
 	
 func _novo_jogo():
+	$timFim.wait_time = 3
 	move = false
-	$aniAudiencia.position.y = 675
+	$aniAudiencia.position.y = 690
 	_habilitaBotoes()
 	_defineElementos()
 	_pergunta()
@@ -107,11 +108,12 @@ func _verifica(var resposta):
 		_desabilitaBotoes()
 		move = true
 		$somAudiencia.play()
-		$timFim.start()
 		score = score + 1
 		if score >= 4:
+			$timFim.wait_time = 5
 			_baloes()
 			score = 0
+		$timFim.start()
 	else:
 		#resposta errada
 		$somErro.play()
