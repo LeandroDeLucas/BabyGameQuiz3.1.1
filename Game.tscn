@@ -32,56 +32,56 @@ position = Vector2( 410.721, 240 )
 [node name="btn0" type="Button" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 377.304
-margin_top = 100.0
-margin_right = 527.304
-margin_bottom = 250.0
+margin_left = 439.919
+margin_top = 86.4949
+margin_right = 559.919
+margin_bottom = 206.495
 toggle_mode = true
 flat = true
 
 [node name="btn1" type="Button" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 581.36
-margin_top = 100.0
-margin_right = 731.36
-margin_bottom = 250.0
+margin_left = 642.747
+margin_top = 86.4949
+margin_right = 762.747
+margin_bottom = 206.495
 shortcut_in_tooltip = false
 flat = true
 
 [node name="btn2" type="Button" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 375.0
-margin_top = 290.0
-margin_right = 525.0
-margin_bottom = 440.0
+margin_left = 441.298
+margin_top = 282.634
+margin_right = 561.298
+margin_bottom = 402.634
 shortcut_in_tooltip = false
 flat = true
 
 [node name="btn3" type="Button" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 580.0
-margin_top = 290.0
-margin_right = 730.0
-margin_bottom = 440.0
+margin_left = 643.842
+margin_top = 282.634
+margin_right = 763.842
+margin_bottom = 402.634
 shortcut_in_tooltip = false
 flat = true
 
 [node name="btnVoltar" type="Button" parent="."]
-margin_left = 68.0189
-margin_top = 398.591
-margin_right = 212.019
-margin_bottom = 439.591
+margin_left = 528.421
+margin_top = 431.74
+margin_right = 672.421
+margin_bottom = 472.74
 custom_fonts/font = SubResource( 1 )
 text = "<- Voltar"
 
 [node name="btnOuvir" type="Button" parent="."]
-margin_left = 102.028
-margin_top = 190.453
-margin_right = 185.028
-margin_bottom = 316.453
+margin_left = 769.654
+margin_top = 191.545
+margin_right = 828.654
+margin_bottom = 277.545
 icon = ExtResource( 4 )
 
 [node name="somOndeEsta" type="AudioStreamPlayer" parent="."]
@@ -100,7 +100,7 @@ stream = ExtResource( 6 )
 stream = ExtResource( 7 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]
-position = Vector2( 407.479, 690 )
+position = Vector2( 217.18, 590.553 )
 scale = Vector2( 0.873382, 0.965306 )
 frames = SubResource( 2 )
 
