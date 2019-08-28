@@ -164,6 +164,6 @@ func _baloes():
 	$somFim.play()
 	for i in 20:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-400,380)
+		baloes.position.x = rand_range(-400,0)
 		add_child(baloes)
 		
