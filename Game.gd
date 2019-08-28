@@ -110,13 +110,15 @@ func _verifica(var resposta):
 	#verifica se a opção escolhida pelo jogador é a correta
 	if resposta == respostaCerta:
 		_desabilitaBotoes()
-		move = true
-		$somAudiencia.play()
 		score = score + 1
 		if score >= 4:
 			$timFim.wait_time = 5
 			_baloes()
 			score = 0
+		else:
+			move = true
+			$somAudiencia.play()
+			
 		$timFim.start()
 	else:
 		#resposta errada
@@ -164,6 +166,6 @@ func _baloes():
 	$somFim.play()
 	for i in 20:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-400,380)
+		baloes.position.x = rand_range(-400,0)
 		add_child(baloes)
 		
