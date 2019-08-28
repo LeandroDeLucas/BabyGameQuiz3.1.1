@@ -44,6 +44,7 @@ func _defineJogo(jogo):
 		imagemPath = "res://Assets/Imagens/Animais/"
 		somPath = "res://Assets/Sons/Animais/"
 		numOpcoes = 10
+		$fundo/AnimatedSprite.play("jogoAnimais")
 	if jogo == ("Cores"):
 		imagemPath = "res://Assets/Imagens/Cores/"
 		somPath = "res://Assets/Sons/Cores/"
@@ -52,14 +53,17 @@ func _defineJogo(jogo):
 		imagemPath = "res://Assets/Imagens/Frutas/"
 		somPath  = "res://Assets/Sons/Frutas/"
 		numOpcoes = 4
+		$fundo/AnimatedSprite.play("padrao")
 	if jogo == ("Letras"):
 		imagemPath = "res://Assets/Imagens/Letras/"
 		somPath = "res://Assets/Sons/Letras/"
 		numOpcoes = 26
+		$fundo/AnimatedSprite.play("jogoLetras")
 	if jogo == ("Numeros"):
 		imagemPath = "res://Assets/Imagens/Numeros/"
 		somPath = "res://Assets/Sons/Numeros/"
 		numOpcoes = 10
+		$fundo/AnimatedSprite.play("padrao")
 		
 func _defineElementos():
 	#Sorteia os elementos da rodada
@@ -133,7 +137,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	if move == true and $aniAudiencia.position.y > 310:
+	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
 func _on_btnOuvir_pressed():
