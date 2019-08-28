@@ -108,16 +108,15 @@ func _pergunta():
 func _verifica(var resposta):
 	#verifica se a opção escolhida pelo jogador é a correta
 	if resposta == respostaCerta:
+		get_node("btn"+str(resposta)).set("modulate","FFFF0F")
 		_desabilitaBotoes()
 		score = score + 1
 		if score >= 4:
-			$timFim.wait_time = 5
 			_baloes()
 			score = 0
 		else:
 			move = true
-			$somAudiencia.play()
-			
+			$somAudiencia.play()	
 		$timFim.start()
 	else:
 		#resposta errada
@@ -146,10 +145,10 @@ func _on_btnOuvir_pressed():
 	_pergunta()
 
 func _on_timFim_timeout():
+	$timFim.wait_time = 0.1
 	if self.get_child_count() == 18:
 		_novo_jogo()
 	else:
-		$timFim.wait_time == 0.1
 		$timFim.start()
 	
 func _desabilitaBotoes():

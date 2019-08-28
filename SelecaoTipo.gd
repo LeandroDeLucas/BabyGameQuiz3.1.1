@@ -4,7 +4,6 @@ var idioma
 
 func _ready():
 	$fundo/AnimatedSprite.play("padrao")
-	pass
 
 func _defineIdioma(idioma):
 	if idioma == "ptBr":
