@@ -114,6 +114,12 @@ pitch_scale = 2.0
 
 [node name="somFim" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 148.556
+margin_top = 450.58
+margin_right = 188.556
+margin_bottom = 464.58
 [connection signal="tree_entered" from="." to="." method="_on_GameAnimais_tree_entered"]
 [connection signal="pressed" from="btn0" to="." method="_on_btn0_pressed"]
 [connection signal="pressed" from="btn1" to="." method="_on_btn1_pressed"]

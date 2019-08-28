@@ -88,7 +88,6 @@ stream = ExtResource( 7 )
 
 [node name="somBg" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -27.262
 
 [node name="btnBg" type="Button" parent="."]
 margin_left = 732.169

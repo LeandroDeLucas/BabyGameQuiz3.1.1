@@ -139,6 +139,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
+	$Label.text = str(self.get_child_count())
 	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
@@ -146,7 +147,11 @@ func _on_btnOuvir_pressed():
 	_pergunta()
 
 func _on_timFim_timeout():
-	_novo_jogo()
+	if self.get_child_count() == 18:
+		_novo_jogo()
+	else:
+		$timFim.wait_time == 0.1
+		$timFim.start()
 	
 func _desabilitaBotoes():
 	for i in numBotoes:
@@ -166,6 +171,6 @@ func _baloes():
 	$somFim.play()
 	for i in 20:
 		var baloes = balao.instance()
-		baloes.position.x = rand_range(-400,0)
+		baloes.position.x = rand_range(-400,350)
 		add_child(baloes)
 		
