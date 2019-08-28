@@ -30,7 +30,7 @@ texture_normal = ExtResource( 2 )
 [node name="tail" type="AnimatedSprite" parent="balloon"]
 position = Vector2( 40.6588, 121.43 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="pop" type="AudioStreamPlayer" parent="balloon"]

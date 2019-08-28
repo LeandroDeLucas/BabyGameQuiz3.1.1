@@ -82,8 +82,7 @@ func _defineElementos():
 	
 	#Define as imagens dos botões
 	for i in numBotoes:
-		get_node("btn" + str(i)).set_button_icon(load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
-#		
+		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
