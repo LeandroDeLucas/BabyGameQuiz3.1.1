@@ -30,13 +30,13 @@ func _novo_jogo():
 func _defineIdioma(idioma):
 	lingua = idioma
 	if idioma == "ptBr":
-		$btnVoltar.text = "VOLTAR"
+		#$btnVoltar.text = "VOLTAR"
 		$somOndeEsta.stream = load("res://Assets/Sons/ptbrOnde.wav")
 	if idioma == "es":
-		$btnVoltar.text = "VOLVER"
+		#$btnVoltar.text = "VOLVER"
 		$somOndeEsta.stream = load("res://Assets/Sons/esOnde.wav")
 	if idioma == "enUs":
-		$btnVoltar.text = "BACK"
+		#$btnVoltar.text = "BACK"
 		$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
 		
 func _defineJogo(jogo):

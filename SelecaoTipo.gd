@@ -12,21 +12,21 @@ func _defineIdioma(idioma):
 		$btnFrutas.text = "FRUTAS"
 		$btnLetras.text = "LETRAS"
 		$btnNumeros.text = "NÚMEROS"
-		$btnVoltar.text = "VOLTAR"
+		#$btnVoltar.text = "VOLTAR"
 	if idioma == "es":
 		$btnAnimais.text = "ANIMALES"
 		$btnCores.text = "COLORES"
 		$btnFrutas.text = "FRUTAS"
 		$btnLetras.text = "CARTAS"
 		$btnNumeros.text = "NÚMEROS"
-		$btnVoltar.text = "VOLVER"
+		#$btnVoltar.text = "VOLVER"
 	if idioma == "enUs":
 		$btnAnimais.text = "ANIMALS"
 		$btnCores.text = "COLORS"
 		$btnFrutas.text = "FRUITS"
 		$btnLetras.text = "LETTERS"
 		$btnNumeros.text = "NUMBERS"
-		$btnVoltar.text = "BACK"
+		#$btnVoltar.text = "BACK"
 
 func _on_btnVoltar_pressed():
 	$somClick.play()
