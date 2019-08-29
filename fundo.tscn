@@ -34,5 +34,4 @@ position = Vector2( 10.0856, 2.50527 )
 scale = Vector2( 1.08662, 1.09425 )
 frames = SubResource( 1 )
 animation = "padrao"
-frame = 1
 playing = true
