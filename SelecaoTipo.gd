@@ -3,7 +3,7 @@ extends Node2D
 var idioma
 
 func _ready():
-	$fundo/AnimatedSprite.play("padrao")
+	$fundo/AnimatedSprite.play("selecaoTipo")
 
 func _defineIdioma(idioma):
 	if idioma == "ptBr":

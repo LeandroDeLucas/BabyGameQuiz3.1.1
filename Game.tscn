@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/Imagens/btnOuvir.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Sons/Animais/ptBr/6.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=7]
-[ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=9]
-[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Imagens/menu.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Imagens/btnOuvir.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sons/Animais/ptBr/6.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -17,7 +18,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -54,34 +55,36 @@ margin_right = 763.0
 margin_bottom = 405.0
 
 [node name="btnVoltar" type="Button" parent="."]
-margin_left = 528.421
-margin_top = 431.74
-margin_right = 672.421
-margin_bottom = 472.74
+margin_left = 13.5778
+margin_top = 408.673
+margin_right = 75.5778
+margin_bottom = 464.673
 custom_fonts/font = SubResource( 1 )
-text = "<- Voltar"
+icon = ExtResource( 4 )
+flat = true
 
 [node name="btnOuvir" type="Button" parent="."]
-margin_left = 769.654
-margin_top = 191.545
-margin_right = 828.654
-margin_bottom = 277.545
-icon = ExtResource( 4 )
+margin_left = 768.426
+margin_top = 194.0
+margin_right = 827.426
+margin_bottom = 280.0
+icon = ExtResource( 5 )
+flat = true
 
 [node name="somOndeEsta" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 
 [node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
 
 [node name="somElemento" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 
 [node name="somRespostaCerta" type="AudioStreamPlayer" parent="."]
 
 [node name="somRespostaErrada" type="AudioStreamPlayer" parent="."]
 
 [node name="somAudiencia" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]
 position = Vector2( 217.18, 590.553 )
@@ -93,11 +96,11 @@ wait_time = 3.0
 one_shot = true
 
 [node name="somErro" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 pitch_scale = 2.0
 
 [node name="somFim" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 148.556
