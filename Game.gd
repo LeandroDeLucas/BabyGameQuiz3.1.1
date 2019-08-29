@@ -137,7 +137,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	$Label.text = str(self.get_child_count())
+	$Label.text = str(get_tree().get_nodes_in_group("grpBaloes").size())
 	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
@@ -146,7 +146,8 @@ func _on_btnOuvir_pressed():
 
 func _on_timFim_timeout():
 	$timFim.wait_time = 0.1
-	if self.get_child_count() == 18:
+	if get_tree().get_nodes_in_group("grpBaloes").size() == 0:
+	#f self.get_children().is_in_group("baloes") > 0:
 		_novo_jogo()
 	else:
 		$timFim.start()
@@ -167,8 +168,8 @@ func _habilitaBotoes():
 func _baloes():
 	var balao = preload("res://Ballon.tscn")
 	$somFim.play()
-	for i in 20:
+	for i in rand_range(20,30):
 		var baloes = balao.instance()
 		baloes.position.x = rand_range(-400,350)
 		add_child(baloes)
-		
+		baloes.add_to_group("grpBaloes")
