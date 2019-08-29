@@ -38,5 +38,5 @@ __meta__ = {
 position = Vector2( 0.879044, 0.879056 )
 scale = Vector2( 1.08, 1.08 )
 frames = SubResource( 1 )
-animation = "selecaoTipo"
+animation = "jogoAnimais"
 playing = true

@@ -31,28 +31,28 @@ script = ExtResource( 1 )
 position = Vector2( 410.721, 240 )
 
 [node name="btn0" type="TextureButton" parent="."]
-margin_left = 440.0
+margin_left = 428.0
 margin_top = 85.0
-margin_right = 560.0
+margin_right = 548.0
 margin_bottom = 205.0
 
 [node name="btn1" type="TextureButton" parent="."]
-margin_left = 643.0
+margin_left = 630.0
 margin_top = 85.0
-margin_right = 763.0
+margin_right = 750.0
 margin_bottom = 205.0
 
 [node name="btn2" type="TextureButton" parent="."]
-margin_left = 440.0
-margin_top = 285.0
-margin_right = 560.0
-margin_bottom = 405.0
+margin_left = 428.0
+margin_top = 280.0
+margin_right = 548.0
+margin_bottom = 400.0
 
 [node name="btn3" type="TextureButton" parent="."]
-margin_left = 643.0
-margin_top = 285.0
-margin_right = 763.0
-margin_bottom = 405.0
+margin_left = 630.0
+margin_top = 280.0
+margin_right = 750.0
+margin_bottom = 400.0
 
 [node name="btnVoltar" type="Button" parent="."]
 margin_left = 13.5778
