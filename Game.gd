@@ -64,6 +64,11 @@ func _defineJogo(jogo):
 		somPath = "res://Assets/Sons/Numeros/"
 		numOpcoes = 10
 		$fundo/AnimatedSprite.play("padrao")
+	if jogo == ("Alimentos"):
+		imagemPath = "res://Assets/Imagens/Alimentos/"
+		somPath = "res://Assets/Sons/Alimentos/"
+		numOpcoes = 17
+		$fundo/AnimatedSprite.play("padrao")
 		
 func _defineElementos():
 	#Sorteia os elementos da rodada

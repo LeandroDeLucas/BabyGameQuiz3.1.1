@@ -12,6 +12,7 @@ func _defineIdioma(idioma):
 		$btnFrutas.text = "FRUTAS"
 		$btnLetras.text = "LETRAS"
 		$btnNumeros.text = "NÚMEROS"
+		$btnAlimentos.text = "ALIMENTOS"
 		#$btnVoltar.text = "VOLTAR"
 	if idioma == "es":
 		$btnAnimais.text = "ANIMALES"
@@ -19,6 +20,7 @@ func _defineIdioma(idioma):
 		$btnFrutas.text = "FRUTAS"
 		$btnLetras.text = "CARTAS"
 		$btnNumeros.text = "NÚMEROS"
+		$btnAlimentos.text = "ALIMENTOS"
 		#$btnVoltar.text = "VOLVER"
 	if idioma == "enUs":
 		$btnAnimais.text = "ANIMALS"
@@ -26,6 +28,7 @@ func _defineIdioma(idioma):
 		$btnFrutas.text = "FRUITS"
 		$btnLetras.text = "LETTERS"
 		$btnNumeros.text = "NUMBERS"
+		$btnAlimentos.text = "FOODS"
 		#$btnVoltar.text = "BACK"
 
 func _on_btnVoltar_pressed():
@@ -47,11 +50,20 @@ func _on_btnLetras_pressed():
 
 func _on_btnCores_pressed():
 	$somClick.play()
+	self.get_parent()._setupJogo("Cores")
+	self.queue_free()
 
 func _on_btnFrutas_pressed():
 	$somClick.play()
+	self.get_parent()._setupJogo("Frutas")
+	self.queue_free()
 
 func _on_btnNumeros_pressed():
 	$somClick.play()
 	self.get_parent()._setupJogo("Numeros")
+	self.queue_free()
+
+func _on_btnAlimentos_pressed():
+	$somClick.play()
+	self.get_parent()._setupJogo("Alimentos")
 	self.queue_free()

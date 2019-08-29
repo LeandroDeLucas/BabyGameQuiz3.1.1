@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://SelecaoTipo.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
@@ -7,10 +7,11 @@
 [ext_resource path="res://Assets/Imagens/btnAnimais.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Imagens/btnCores.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Imagens/btnLetras.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Imagens/linguagem.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Imagens/btnFrutas.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Imagens/btnNumeros.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Sons/click.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Imagens/btnFrutas.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Imagens/btnNumeros.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Imagens/btnAlimentos.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Imagens/linguagem.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sons/click.wav" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0.486275, 0.0823529, 0.0823529, 1 )
@@ -23,13 +24,13 @@ font_data = ExtResource( 4 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 30
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=6]
+size = 30
 font_data = ExtResource( 4 )
 
 [node name="selecaoTipo" type="Node2D"]
@@ -69,41 +70,54 @@ custom_fonts/font = SubResource( 3 )
 text = "Letras"
 icon = ExtResource( 7 )
 
-[node name="btnVoltar" type="Button" parent="."]
-margin_left = 21.2284
-margin_top = 399.671
-margin_right = 83.2284
-margin_bottom = 455.671
-custom_fonts/font = SubResource( 4 )
-icon = ExtResource( 8 )
-flat = true
-
 [node name="btnFrutas" type="Button" parent="."]
 margin_left = 111.36
 margin_top = 220.425
 margin_right = 260.36
 margin_bottom = 276.425
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Frutas"
-icon = ExtResource( 9 )
+icon = ExtResource( 8 )
 
 [node name="btnNumeros" type="Button" parent="."]
 margin_left = 370.693
 margin_top = 40.0928
 margin_right = 520.693
 margin_bottom = 96.0928
+rect_pivot_offset = Vector2( -40.693, 259.907 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "Números"
+icon = ExtResource( 9 )
+
+[node name="btnAlimentos" type="Button" parent="."]
+margin_left = 370.0
+margin_top = 125.0
+margin_right = 525.0
+margin_bottom = 181.0
+rect_pivot_offset = Vector2( -40.693, 259.907 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 5 )
+text = "Alimentos"
 icon = ExtResource( 10 )
 
+[node name="btnVoltar" type="Button" parent="."]
+margin_left = 21.2284
+margin_top = 399.671
+margin_right = 83.2284
+margin_bottom = 455.671
+custom_fonts/font = SubResource( 6 )
+icon = ExtResource( 11 )
+flat = true
+
 [node name="somClick" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 [connection signal="visibility_changed" from="." to="." method="_on_selecaoTipo_visibility_changed"]
 [connection signal="pressed" from="btnAnimais" to="." method="_on_btnAnimais_pressed"]
 [connection signal="pressed" from="btnCores" to="." method="_on_btnCores_pressed"]
 [connection signal="pressed" from="btnLetras" to="." method="_on_btnLetras_pressed"]
-[connection signal="pressed" from="btnVoltar" to="." method="_on_btnVoltar_pressed"]
 [connection signal="pressed" from="btnFrutas" to="." method="_on_btnFrutas_pressed"]
 [connection signal="pressed" from="btnNumeros" to="." method="_on_btnNumeros_pressed"]
+[connection signal="pressed" from="btnAlimentos" to="." method="_on_btnAlimentos_pressed"]
+[connection signal="pressed" from="btnVoltar" to="." method="_on_btnVoltar_pressed"]
