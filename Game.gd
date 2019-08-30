@@ -8,6 +8,7 @@ var imagemPath: String # "res://Assets/Imagens/Animais/"
 var somPath: String # "res://Assets/Sons/Animais/"
 var numOpcoes :int # 10 #contador de imagens dentro de imagemPath
 var lingua: String # "ptBr"
+var elementosEncontrados: Array = []
 
 var elemento = [Elemento.new(),Elemento.new(),Elemento.new(),Elemento.new()]
 
@@ -64,9 +65,9 @@ func _defineJogo(jogo):
 		"Alimentos":
 			imagemPath = "res://Assets/Imagens/Alimentos/"
 			somPath = "res://Assets/Sons/Alimentos/"
-			$fundo/AnimatedSprite.play("padrao")
+			$fundo/AnimatedSprite.play("jogoAlimentos")
 			
-	numOpcoes = _count_files_in_directory(imagemPath)
+	_encontrarElementos(imagemPath)
 
 func _defineElementos():
 	#Sorteia os elementos da rodada
@@ -88,12 +89,12 @@ func _defineElementos():
 	
 	#Define as imagens dos botões
 	for i in numBotoes:
-		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
+		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elementosEncontrados[elemento[i]._getIndex()]) + ".png"))
 	
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
-	$somElemento.stream = load(somPath + lingua + "/" + str(elemento[respostaCerta]._getIndex()) + ".wav")
+	$somElemento.stream = load(somPath + lingua + "/" + str(elementosEncontrados[elemento[respostaCerta]._getIndex()]) + ".wav")
 	elementoUltimoSorteio._setup(elemento[respostaCerta]._getIndex())
 	
 func _on_btn0_pressed():
@@ -181,8 +182,8 @@ func _baloes():
 		add_child(baloes)
 		baloes.add_to_group("grpBaloes")
 		
-func _count_files_in_directory(var path):
-    var numFiles: int = 0
+func _encontrarElementos(var path):
+    numOpcoes = -1
     var dir = Directory.new()
     dir.open(path)
     dir.list_dir_begin()
@@ -191,6 +192,7 @@ func _count_files_in_directory(var path):
         if file == "":
             break
         elif (file.get_extension()) == "png":
-            numFiles = numFiles + 1
+            numOpcoes = numOpcoes + 1
+            elementosEncontrados.append(str(file.get_basename()))
     dir.list_dir_end()
-    return numFiles
+	
