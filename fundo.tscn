@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Imagens/fundoAnimais.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Imagens/fundoSelecaoGame.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Imagens/fundoSelecaoTipo.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Imagens/fundoLetras.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Imagens/fundoLinguagem.png" type="Texture" id=4]
 
