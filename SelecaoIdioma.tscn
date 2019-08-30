@@ -111,6 +111,12 @@ margin_bottom = 440.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "SAIR"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 371.0
+margin_top = 456.0
+margin_right = 411.0
+margin_bottom = 470.0
 [connection signal="pressed" from="btnPortugues" to="." method="_on_btnPortugues_pressed"]
 [connection signal="pressed" from="btnEspanhol" to="." method="_on_btnEspanhol_pressed"]
 [connection signal="pressed" from="btnIngles" to="." method="_on_btnIngles_pressed"]

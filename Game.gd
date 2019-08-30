@@ -1,12 +1,13 @@
 extends Node2D
-#algumas cosntantes podem ser transformadas em variáveis para que seja possível usar os diversos tipos de jogos
-#(animais, cores, letras ...) na mesma cena, alterando apenas o path das imagens e dos sons
+
+var files = []
+var dir = Directory.new()
 
 const numBotoes :int = 4 #cotador do número de botões na tela 
-var numOpcoes :int #= 10 #contador de imagens de animais
-var imagemPath: String #= "res://Assets/Imagens/Animais/"
-var somPath: String #= "res://Assets/Sons/Animais/"
-var lingua: String #= "ptBr"
+var imagemPath: String # "res://Assets/Imagens/Animais/"
+var somPath: String # "res://Assets/Sons/Animais/"
+var numOpcoes :int # 10 #contador de imagens dentro de imagemPath
+var lingua: String # "ptBr"
 
 var elemento = [Elemento.new(),Elemento.new(),Elemento.new(),Elemento.new()]
 
@@ -40,47 +41,47 @@ func _defineIdioma(idioma):
 		$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
 		
 func _defineJogo(jogo):
-	if jogo == ("Animais"):
-		imagemPath = "res://Assets/Imagens/Animais/"
-		somPath = "res://Assets/Sons/Animais/"
-		numOpcoes = 10
-		$fundo/AnimatedSprite.play("jogoAnimais")
-	if jogo == ("Cores"):
-		imagemPath = "res://Assets/Imagens/Cores/"
-		somPath = "res://Assets/Sons/Cores/"
-		numOpcoes = 4
-	if jogo == ("Frutas"):
-		imagemPath = "res://Assets/Imagens/Frutas/"
-		somPath  = "res://Assets/Sons/Frutas/"
-		numOpcoes = 4
-		$fundo/AnimatedSprite.play("padrao")
-	if jogo == ("Letras"):
-		imagemPath = "res://Assets/Imagens/Letras/"
-		somPath = "res://Assets/Sons/Letras/"
-		numOpcoes = 26
-		$fundo/AnimatedSprite.play("jogoLetras")
-	if jogo == ("Numeros"):
-		imagemPath = "res://Assets/Imagens/Numeros/"
-		somPath = "res://Assets/Sons/Numeros/"
-		numOpcoes = 10
-		$fundo/AnimatedSprite.play("padrao")
-	if jogo == ("Alimentos"):
-		imagemPath = "res://Assets/Imagens/Alimentos/"
-		somPath = "res://Assets/Sons/Alimentos/"
-		numOpcoes = 17
-		$fundo/AnimatedSprite.play("padrao")
-		
+	match(jogo):
+		"Animais":
+			imagemPath = "res://Assets/Imagens/Animais/"
+			somPath = "res://Assets/Sons/Animais/"
+			$fundo/AnimatedSprite.play("jogoAnimais")
+		"Cores":
+			imagemPath = "res://Assets/Imagens/Cores/"
+			somPath = "res://Assets/Sons/Cores/"
+		"Frutas":
+			imagemPath = "res://Assets/Imagens/Frutas/"
+			somPath  = "res://Assets/Sons/Frutas/"
+			$fundo/AnimatedSprite.play("padrao")
+		"Letras":
+			imagemPath = "res://Assets/Imagens/Letras/"
+			somPath = "res://Assets/Sons/Letras/"
+			$fundo/AnimatedSprite.play("jogoLetras")
+		"Numeros":
+			imagemPath = "res://Assets/Imagens/Numeros/"
+			somPath = "res://Assets/Sons/Numeros/"
+			$fundo/AnimatedSprite.play("padrao")
+		"Alimentos":
+			imagemPath = "res://Assets/Imagens/Alimentos/"
+			somPath = "res://Assets/Sons/Alimentos/"
+			$fundo/AnimatedSprite.play("padrao")
+			
+	numOpcoes = _count_files_in_directory(imagemPath)
+
 func _defineElementos():
 	#Sorteia os elementos da rodada
 	elemento[0]._setup(randi() % numOpcoes)
 	while elemento[0]._getIndex() == elementoUltimoSorteio._getIndex(): #Evita que a resposta certa da última rodada apareça em jogo
 		elemento[0]._setup(randi() % numOpcoes)
+	
 	elemento[1]._setup(randi() % numOpcoes)
-	while (elemento[0]._getIndex() == elemento[1]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
+	while (elemento[1]._getIndex() == elemento[0]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[1]._setup(randi() % numOpcoes)
+	
 	elemento[2]._setup(randi() % numOpcoes)
 	while (elemento[2]._getIndex() == elemento[0]._getIndex()) or (elemento[2]._getIndex() == elemento[1]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[2]._setup(randi() % numOpcoes)
+	
 	elemento[3]._setup(randi() % numOpcoes)
 	while (elemento[3]._getIndex() == elemento[0]._getIndex()) or (elemento[3]._getIndex() == elemento[1]._getIndex()) or (elemento[3]._getIndex() == elemento[2]._getIndex() or elemento[3]._getIndex() == elementoUltimoSorteio._getIndex()):
 		elemento[3]._setup(randi() % numOpcoes)
@@ -88,6 +89,7 @@ func _defineElementos():
 	#Define as imagens dos botões
 	for i in numBotoes:
 		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elemento[i]._getIndex()) + ".png"))
+	
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % 4
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
@@ -142,7 +144,7 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	$Label.text = str(get_tree().get_nodes_in_group("grpBaloes").size())
+	$Label.text = str(numOpcoes)
 	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
@@ -178,3 +180,17 @@ func _baloes():
 		baloes.position.x = rand_range(-400,350)
 		add_child(baloes)
 		baloes.add_to_group("grpBaloes")
+		
+func _count_files_in_directory(var path):
+    var numFiles: int = 0
+    var dir = Directory.new()
+    dir.open(path)
+    dir.list_dir_begin()
+    while true:
+        var file = dir.get_next()
+        if file == "":
+            break
+        elif (file.get_extension()) == "png":
+            numFiles = numFiles + 1
+    dir.list_dir_end()
+    return numFiles
