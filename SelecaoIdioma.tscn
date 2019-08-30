@@ -19,10 +19,10 @@ font_data = ExtResource( 6 )
 size = 30
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.345098, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 25
 font_data = ExtResource( 6 )
 
@@ -108,8 +108,8 @@ margin_left = 93.0
 margin_top = 380.0
 margin_right = 343.0
 margin_bottom = 440.0
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "SAIR"
 [connection signal="pressed" from="btnPortugues" to="." method="_on_btnPortugues_pressed"]
 [connection signal="pressed" from="btnEspanhol" to="." method="_on_btnEspanhol_pressed"]
