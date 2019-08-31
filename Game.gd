@@ -50,10 +50,11 @@ func _defineJogo(jogo):
 		"Cores":
 			imagemPath = "res://Assets/Imagens/Cores/"
 			somPath = "res://Assets/Sons/Cores/"
+			$fundo/AnimatedSprite.play("jogoAnimais")
 		"Frutas":
 			imagemPath = "res://Assets/Imagens/Frutas/"
 			somPath  = "res://Assets/Sons/Frutas/"
-			$fundo/AnimatedSprite.play("padrao")
+			$fundo/AnimatedSprite.play("jogoAlimentos")
 		"Letras":
 			imagemPath = "res://Assets/Imagens/Letras/"
 			somPath = "res://Assets/Sons/Letras/"
@@ -61,7 +62,7 @@ func _defineJogo(jogo):
 		"Numeros":
 			imagemPath = "res://Assets/Imagens/Numeros/"
 			somPath = "res://Assets/Sons/Numeros/"
-			$fundo/AnimatedSprite.play("padrao")
+			$fundo/AnimatedSprite.play("jogoAlimentos")
 		"Alimentos":
 			imagemPath = "res://Assets/Imagens/Alimentos/"
 			somPath = "res://Assets/Sons/Alimentos/"
