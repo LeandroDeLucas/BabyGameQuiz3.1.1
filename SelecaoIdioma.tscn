@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://SelecaoIdioma.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
@@ -15,12 +15,40 @@
 size = 46
 font_data = ExtResource( 6 )
 
+[sub_resource type="StyleBoxFlat" id=7]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id=5]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 6 )
 
+[sub_resource type="StyleBoxFlat" id=8]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id=6]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.345098, 0, 0, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [sub_resource type="DynamicFont" id=4]
 size = 25
@@ -84,6 +112,8 @@ margin_left = 464.496
 margin_top = 380.0
 margin_right = 714.496
 margin_bottom = 440.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = ExtResource( 7 )
 custom_fonts/font = SubResource( 2 )
 text = "PRÓXIMO ->"
@@ -108,6 +138,8 @@ margin_left = 93.0
 margin_top = 380.0
 margin_right = 343.0
 margin_bottom = 440.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 6 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "SAIR"
