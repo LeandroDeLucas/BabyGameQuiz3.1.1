@@ -3,28 +3,12 @@ extends Node2D
 var selecaoTipo = preload("res://SelecaoTipo.tscn")
 var lingua = "ptBr"
 
-func _count_files_in_directory(path):
-    var numFiles: int = 0
-    var dir = Directory.new()
-    dir.open(path)
-    dir.list_dir_begin()
-    while true:
-        var file = dir.get_next()
-        if file == "":
-            break
-        elif (file.get_extension()) == "png":
-            numFiles = numFiles + 1
-    dir.list_dir_end()
-    return numFiles
-
-
 func _ready():
 	$fundo/AnimatedSprite.play("selecaoLinguagem")
 	$btnEspanhol.set_modulate("a4a4a4")
 	$btnIngles.set_modulate("a4a4a4")
 	$somBg.play()
-	$Label.text = str(_count_files_in_directory("res://Assets/Imagens/Letras/"))
-	
+		
 func _on_btnPortugues_pressed():
 	$somClick.play()
 	$rtgSelecao.margin_left = $btnPortugues.margin_left

@@ -15,23 +15,23 @@
 size = 46
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=2]
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 30
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=5]
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -43,14 +43,14 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.345098, 0, 0, 1 )
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=8]
 size = 25
 font_data = ExtResource( 6 )
 
@@ -112,10 +112,10 @@ margin_left = 464.496
 margin_top = 380.0
 margin_right = 714.496
 margin_bottom = 440.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = ExtResource( 7 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "PRÓXIMO ->"
 
 [node name="somClick" type="AudioStreamPlayer" parent="."]
@@ -138,17 +138,11 @@ margin_left = 93.0
 margin_top = 380.0
 margin_right = 343.0
 margin_bottom = 440.0
-custom_styles/hover = SubResource( 8 )
+custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "SAIR"
-
-[node name="Label" type="Label" parent="."]
-margin_left = 371.0
-margin_top = 456.0
-margin_right = 411.0
-margin_bottom = 470.0
 [connection signal="pressed" from="btnPortugues" to="." method="_on_btnPortugues_pressed"]
 [connection signal="pressed" from="btnEspanhol" to="." method="_on_btnEspanhol_pressed"]
 [connection signal="pressed" from="btnIngles" to="." method="_on_btnIngles_pressed"]

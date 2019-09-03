@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/banana.wav-4d1d3523b6df136d461e383298736b61.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/banana.wav"
+dest_files=[ "res://.import/banana.wav-4d1d3523b6df136d461e383298736b61.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

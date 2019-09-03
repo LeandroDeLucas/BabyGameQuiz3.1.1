@@ -8,14 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Reference",
-"class": "Elemento",
-"language": "GDScript",
-"path": "res://Elemento.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"Elemento": ""
+
 }
 
 [application]

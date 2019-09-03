@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laranja.wav-8b212b0d86eecd799bb2704a7280ac3a.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/laranja.wav"
+dest_files=[ "res://.import/laranja.wav-8b212b0d86eecd799bb2704a7280ac3a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

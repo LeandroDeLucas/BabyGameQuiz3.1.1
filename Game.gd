@@ -1,19 +1,16 @@
 extends Node2D
 
-var files = []
-var dir = Directory.new()
-
 const numBotoes :int = 4 #cotador do número de botões na tela 
-var imagemPath: String # "res://Assets/Imagens/Animais/"
-var somPath: String # "res://Assets/Sons/Animais/"
-var numOpcoes :int # 10 #contador de imagens dentro de imagemPath
-var lingua: String # "ptBr"
+
+var imagemPath: String 
+var somPath: String 
+var numOpcoes :int # contador de imagens dentro de imagemPath
+var lingua: String 
 var elementosEncontrados: Array = []
-
-var elemento = [Elemento.new(),Elemento.new(),Elemento.new(),Elemento.new()]
-
+var elementoTemp
+var ultimoElmento
+var index: int
 var respostaCerta: int
-var elementoUltimoSorteio = Elemento.new()
 var move = false
 var score:int
 
@@ -72,32 +69,21 @@ func _defineJogo(jogo):
 
 func _defineElementos():
 	#Sorteia os elementos da rodada
-	elemento[0]._setup(randi() % numOpcoes)
-	while elemento[0]._getIndex() == elementoUltimoSorteio._getIndex(): #Evita que a resposta certa da última rodada apareça em jogo
-		elemento[0]._setup(randi() % numOpcoes)
-	
-	elemento[1]._setup(randi() % numOpcoes)
-	while (elemento[1]._getIndex() == elemento[0]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
-		elemento[1]._setup(randi() % numOpcoes)
-	
-	elemento[2]._setup(randi() % numOpcoes)
-	while (elemento[2]._getIndex() == elemento[0]._getIndex()) or (elemento[2]._getIndex() == elemento[1]._getIndex() or elemento[1]._getIndex() == elementoUltimoSorteio._getIndex()):
-		elemento[2]._setup(randi() % numOpcoes)
-	
-	elemento[3]._setup(randi() % numOpcoes)
-	while (elemento[3]._getIndex() == elemento[0]._getIndex()) or (elemento[3]._getIndex() == elemento[1]._getIndex()) or (elemento[3]._getIndex() == elemento[2]._getIndex() or elemento[3]._getIndex() == elementoUltimoSorteio._getIndex()):
-		elemento[3]._setup(randi() % numOpcoes)
-	
-	#Define as imagens dos botões
 	for i in numBotoes:
-		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elementosEncontrados[elemento[i]._getIndex()]) + ".png"))
-	
+		index = rand_range(i, numOpcoes + 1)
+		elementoTemp = elementosEncontrados[i]
+		elementosEncontrados[i] = elementosEncontrados[index]
+		elementosEncontrados[index] = elementoTemp
+		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elementosEncontrados[i]) + ".png"))
 	#Sorteia a resposta de certa
-	respostaCerta = randi() % 4
-	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
-	$somElemento.stream = load(somPath + lingua + "/" + str(elementosEncontrados[elemento[respostaCerta]._getIndex()]) + ".wav")
-	elementoUltimoSorteio._setup(elemento[respostaCerta]._getIndex())
+	respostaCerta = randi() % numBotoes
+	while elementosEncontrados[respostaCerta] == ultimoElmento:
+		respostaCerta = randi() % numBotoes
 	
+	ultimoElmento = elementosEncontrados[respostaCerta]
+	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
+	$somElemento.stream = load(somPath + lingua + "/" + str(elementosEncontrados[respostaCerta]) + ".wav")
+		
 func _on_btn0_pressed():
 	_verifica(0)
 
@@ -140,13 +126,16 @@ func _on_btnVoltar_pressed():
 	self.queue_free()
 
 func _on_somOndeEsta_finished():
-	$somTipoElemento.play()
-
+	var somTipoElementoCheck = File.new()
+	if somTipoElementoCheck.file_exists(somPath + lingua + "/tipoElemento.wav"):
+		$somTipoElemento.play()
+	else:
+		$somElemento.play()
+	
 func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	$Label.text = str(numOpcoes)
 	if move == true and $aniAudiencia.position.y > 400:
 		$aniAudiencia.move_local_y(-25, true)
 
