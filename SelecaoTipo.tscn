@@ -138,7 +138,6 @@ flat = true
 
 [node name="somClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
-[connection signal="visibility_changed" from="." to="." method="_on_selecaoTipo_visibility_changed"]
 [connection signal="pressed" from="btnAnimais" to="." method="_on_btnAnimais_pressed"]
 [connection signal="pressed" from="btnCores" to="." method="_on_btnCores_pressed"]
 [connection signal="pressed" from="btnLetras" to="." method="_on_btnLetras_pressed"]

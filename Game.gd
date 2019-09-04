@@ -17,7 +17,9 @@ var score:int
 func _ready():
 	randomize()
 	_novo_jogo()
-	
+	for i in  elementosEncontrados.size():
+		$Label.text = $Label.text + "," + elementosEncontrados[i]
+
 func _novo_jogo():
 	$timFim.wait_time = 3
 	move = false
@@ -37,7 +39,7 @@ func _defineIdioma(idioma):
 	if idioma == "enUs":
 		#$btnVoltar.text = "BACK"
 		$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
-		
+
 func _defineJogo(jogo):
 	match(jogo):
 		"Animais":
@@ -173,16 +175,16 @@ func _baloes():
 		baloes.add_to_group("grpBaloes")
 		
 func _encontrarElementos(var path):
-    numOpcoes = -1
-    var dir = Directory.new()
-    dir.open(path)
-    dir.list_dir_begin()
-    while true:
-        var file = dir.get_next()
-        if file == "":
-            break
-        elif (file.get_extension()) == "png":
-            numOpcoes = numOpcoes + 1
-            elementosEncontrados.append(str(file.get_basename()))
-    dir.list_dir_end()
-	
+	numOpcoes = -1
+	var dir = Directory.new()
+	var file = File.new()
+	dir.open(path)
+	dir.list_dir_begin()
+	while true:
+		file = dir.get_next()
+		if file == "":
+			break
+		elif (file.get_extension()) == "png":
+			numOpcoes = numOpcoes + 1
+			elementosEncontrados.append(str(file.get_basename()))
+	dir.list_dir_end()

@@ -2,7 +2,8 @@ extends Node2D
 
 var poped = false
 var velocity = rand_range(0.5,2.5)
-var coresPossiveis = ["ffffff","ec0000","1ed86b","eb15ca","7d3571","3f3eff","49ff23","5698b5","6238c8","f35619","c8f319","ff73c8","c7ff00","ebe832"]
+var coresPossiveis = ["ffffff","ec0000","00ff6a","ff00e8","3900ff","2cff00","5698b5",
+					   "6238c8","f35619","c8f319","ff73c8","c7ff00","ebe832"]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()

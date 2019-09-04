@@ -8,7 +8,9 @@ func _ready():
 	$btnEspanhol.set_modulate("a4a4a4")
 	$btnIngles.set_modulate("a4a4a4")
 	$somBg.play()
-		
+	$rtgSelecao.margin_left = $btnPortugues.margin_left
+	$rtgSelecao.margin_right = $rtgSelecao.margin_left + 162
+
 func _on_btnPortugues_pressed():
 	$somClick.play()
 	$rtgSelecao.margin_left = $btnPortugues.margin_left
@@ -58,6 +60,7 @@ func _desabilitaBotoes():
 	$btnIngles.set("disabled",true)
 	$btnOk.set("disabled",true)
 	$btnSair.set("disabled",true)
+	$btnBg.set("disabled",true)
 	
 func _habilita_botoes():
 	$btnPortugues.set("disabled",false)
@@ -65,6 +68,7 @@ func _habilita_botoes():
 	$btnIngles.set("disabled",false)
 	$btnOk.set("disabled",false)
 	$btnSair.set("disabled",false)
+	$btnBg.set("disabled",false)
 
 func _setupJogo(tipoJogo: String):
 	var jogo = preload("res://Game.tscn")
