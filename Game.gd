@@ -169,6 +169,8 @@ func _baloes():
 		add_child(baloes)
 		baloes.add_to_group("grpBaloes")
 		
+"""
+
 func _encontrarElementos(var path):
 	numOpcoes = -1
 	var dir = Directory.new()
@@ -188,3 +190,23 @@ func _encontrarElementos(var path):
 			$Label.text = $Label.text + " - Achei arquivos .png \n"
 	dir.list_dir_end()
 	$Label.text = $Label.text + " - Depois do while"
+"""
+
+func _encontrarElementos(var path):
+	numOpcoes = -1
+	var dir = Directory.new()
+	var file = File.new()
+	dir.open(path)
+	dir.list_dir_begin()
+	$Label.text = $Label.text + "entrando no while \n"
+	while true:
+		file = dir.get_next()
+		$Label.text = $Label.text + "found " + str(file.get_basename())
+		$Label.text = $Label.text + " -> " + str(file.get_extension()) + " \n"
+		if file == "":
+			break
+		elif (file.get_extension()) == "png":
+			numOpcoes = numOpcoes + 1
+			elementosEncontrados.append(str(file.get_basename()))
+	dir.list_dir_end()
+	$Label.text = $Label.text + " fim do while"
