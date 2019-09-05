@@ -71,7 +71,7 @@ func _defineElementos():
 		elementoTemp = elementosEncontrados[j]
 		elementosEncontrados[j] = elementosEncontrados[index]
 		elementosEncontrados[index] = elementoTemp
-		get_node("btn" + str(j)).texture_normal = (load(imagemPath + str(elementosEncontrados[j]) + ".png"))
+		get_node("btn" + str(j)).texture_normal = (load(imagemPath + str(elementosEncontrados[j])))
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % numBotoes
 	while elementosEncontrados[respostaCerta] == ultimoElmento:
@@ -79,7 +79,7 @@ func _defineElementos():
 	
 	ultimoElmento = elementosEncontrados[respostaCerta]
 	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
-	$somElemento.stream = load(somPath + lingua + "/" + str(elementosEncontrados[respostaCerta]) + ".wav")
+	$somElemento.stream = load(somPath + lingua + "/" + elementosEncontrados[respostaCerta].replace(".png", ".wav"))
 		
 func _on_btn0_pressed():
 	_verifica(0)
@@ -142,7 +142,6 @@ func _on_btnOuvir_pressed():
 func _on_timFim_timeout():
 	$timFim.wait_time = 0.1
 	if get_tree().get_nodes_in_group("grpBaloes").size() == 0:
-	#f self.get_children().is_in_group("baloes") > 0:
 		_novo_jogo()
 	else:
 		$timFim.start()
@@ -168,8 +167,6 @@ func _baloes():
 		baloes.position.x = rand_range(-400,350)
 		add_child(baloes)
 		baloes.add_to_group("grpBaloes")
-		
-"""
 
 func _encontrarElementos(var path):
 	numOpcoes = -1
@@ -178,35 +175,11 @@ func _encontrarElementos(var path):
 	dir.open(path)
 	dir.list_dir_begin()
 	while true:
-		$Label.text = $Label.text + "Dentro do While \n"
 		file = dir.get_next()
-		$Label.text = $Label.text + str(file.get_extension()) + " \n"
-		if file == "":
-			$Label.text = $Label.text + " - file = aspas aspas \n"
-			break
-		elif (file.get_extension()) == "png":
-			numOpcoes = numOpcoes + 1
-			elementosEncontrados.append(str(file.get_basename()))
-			$Label.text = $Label.text + " - Achei arquivos .png \n"
-	dir.list_dir_end()
-	$Label.text = $Label.text + " - Depois do while"
-"""
-
-func _encontrarElementos(var path):
-	numOpcoes = -1
-	var dir = Directory.new()
-	var file = File.new()
-	dir.open(path)
-	dir.list_dir_begin()
-	$Label.text = $Label.text + "entrando no while \n"
-	while true:
-		file = dir.get_next()
-		$Label.text = $Label.text + "found " + str(file.get_basename())
-		$Label.text = $Label.text + " -> " + str(file.get_extension()) + " \n"
 		if file == "":
 			break
-		elif (file.get_extension()) == "png":
+		elif(file.get_extension() == "import") and (file.get_basename().ends_with(".png")):
 			numOpcoes = numOpcoes + 1
 			elementosEncontrados.append(str(file.get_basename()))
 	dir.list_dir_end()
-	$Label.text = $Label.text + " fim do while"
+	
