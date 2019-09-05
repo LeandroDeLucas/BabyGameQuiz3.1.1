@@ -1,7 +1,7 @@
 extends Node2D
 
-const numBotoes :int = 4 #cotador do número de botões na tela 
-
+#cotador do número de botões na tela 
+const numBotoes :int = 4
 var imagemPath: String 
 var somPath: String 
 var numOpcoes :int # contador de imagens dentro de imagemPath
@@ -17,8 +17,6 @@ var score:int
 func _ready():
 	randomize()
 	_novo_jogo()
-	for i in  elementosEncontrados.size():
-		$Label.text = $Label.text + "," + elementosEncontrados[i]
 
 func _novo_jogo():
 	$timFim.wait_time = 3
@@ -30,15 +28,13 @@ func _novo_jogo():
 
 func _defineIdioma(idioma):
 	lingua = idioma
-	if idioma == "ptBr":
-		#$btnVoltar.text = "VOLTAR"
-		$somOndeEsta.stream = load("res://Assets/Sons/ptbrOnde.wav")
-	if idioma == "es":
-		#$btnVoltar.text = "VOLVER"
-		$somOndeEsta.stream = load("res://Assets/Sons/esOnde.wav")
-	if idioma == "enUs":
-		#$btnVoltar.text = "BACK"
-		$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
+	match(lingua):
+		"ptBr":
+			$somOndeEsta.stream = load("res://Assets/Sons/ptbrOnde.wav")
+		"es":
+			$somOndeEsta.stream = load("res://Assets/Sons/esOnde.wav")
+		"enUs":
+			$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
 
 func _defineJogo(jogo):
 	match(jogo):
@@ -66,17 +62,16 @@ func _defineJogo(jogo):
 			imagemPath = "res://Assets/Imagens/Alimentos/"
 			somPath = "res://Assets/Sons/Alimentos/"
 			$fundo/AnimatedSprite.play("jogoAlimentos")
-			
 	_encontrarElementos(imagemPath)
 
 func _defineElementos():
 	#Sorteia os elementos da rodada
-	for i in numBotoes:
-		index = rand_range(i, numOpcoes + 1)
-		elementoTemp = elementosEncontrados[i]
-		elementosEncontrados[i] = elementosEncontrados[index]
+	for j in numBotoes:
+		index = rand_range(j, numOpcoes + 1)
+		elementoTemp = elementosEncontrados[j]
+		elementosEncontrados[j] = elementosEncontrados[index]
 		elementosEncontrados[index] = elementoTemp
-		get_node("btn" + str(i)).texture_normal = (load(imagemPath + str(elementosEncontrados[i]) + ".png"))
+		get_node("btn" + str(j)).texture_normal = (load(imagemPath + str(elementosEncontrados[j]) + ".png"))
 	#Sorteia a resposta de certa
 	respostaCerta = randi() % numBotoes
 	while elementosEncontrados[respostaCerta] == ultimoElmento:
@@ -181,10 +176,15 @@ func _encontrarElementos(var path):
 	dir.open(path)
 	dir.list_dir_begin()
 	while true:
+		$Label.text = $Label.text + "Dentro do While \n"
 		file = dir.get_next()
+		$Label.text = $Label.text + str(file.get_extension()) + " \n"
 		if file == "":
+			$Label.text = $Label.text + " - file = aspas aspas \n"
 			break
 		elif (file.get_extension()) == "png":
 			numOpcoes = numOpcoes + 1
 			elementosEncontrados.append(str(file.get_basename()))
+			$Label.text = $Label.text + " - Achei arquivos .png \n"
 	dir.list_dir_end()
+	$Label.text = $Label.text + " - Depois do while"

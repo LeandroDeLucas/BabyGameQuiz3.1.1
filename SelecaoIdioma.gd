@@ -5,9 +5,9 @@ var lingua = "ptBr"
 
 func _ready():
 	$fundo/AnimatedSprite.play("selecaoLinguagem")
+	$somBg.play()
 	$btnEspanhol.set_modulate("a4a4a4")
 	$btnIngles.set_modulate("a4a4a4")
-	$somBg.play()
 	$rtgSelecao.margin_left = $btnPortugues.margin_left
 	$rtgSelecao.margin_right = $rtgSelecao.margin_left + 162
 
@@ -70,7 +70,7 @@ func _habilita_botoes():
 	$btnSair.set("disabled",false)
 	$btnBg.set("disabled",false)
 
-func _setupJogo(tipoJogo: String):
+func _setupJogo(tipoJogo):
 	var jogo = preload("res://Game.tscn")
 	var novoJogo = jogo.instance()
 	novoJogo._defineIdioma(lingua)
