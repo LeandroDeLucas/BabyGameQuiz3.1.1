@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=11]
+[ext_resource path="res://estiloBotoesAzuis.tres" type="StyleBox" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -101,6 +102,18 @@ pitch_scale = 2.0
 
 [node name="somFim" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 102.0
+margin_top = 432.0
+margin_right = 747.0
+margin_bottom = 463.0
+custom_styles/fg = ExtResource( 12 )
+max_value = 25.0
+step = 1.0
+value = 15.0
+rounded = true
+percent_visible = false
 [connection signal="pressed" from="btn0" to="." method="_on_btn0_pressed"]
 [connection signal="pressed" from="btn1" to="." method="_on_btn1_pressed"]
 [connection signal="pressed" from="btn2" to="." method="_on_btn2_pressed"]

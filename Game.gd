@@ -13,6 +13,7 @@ var index: int
 var respostaCerta: int
 var move = false
 var score:int
+var tentativa:int
 
 func _ready():
 	randomize()
@@ -21,6 +22,7 @@ func _ready():
 func _novo_jogo():
 	$timFim.wait_time = 3
 	move = false
+	tentativa = 0
 	$aniAudiencia.position.y = 690
 	_habilitaBotoes()
 	_defineElementos()
@@ -102,20 +104,25 @@ func _verifica(var resposta):
 	if resposta == respostaCerta:
 		get_node("btn"+str(resposta)).set("modulate","FFFF0F")
 		_desabilitaBotoes()
-		score = score + 1
-		if score >= 4:
+		match (tentativa):
+			0: score = score + 4
+			1: score = score + 2
+			2: score = score + 1
+		$ProgressBar.value = score
+		if score >= 25:
 			_baloes()
 			score = 0
+			$ProgressBar.value = score
 		else:
 			move = true
 			$somAudiencia.play()	
 		$timFim.start()
 	else:
 		#resposta errada
+		tentativa =  tentativa + 1
 		$somErro.play()
 		get_node("btn"+str(resposta)).set("disaled",true)
 		get_node("btn"+str(resposta)).set("modulate","3e3e3e")
-		score = 0
 	
 func _on_btnVoltar_pressed():
 	self.get_parent().call("_habilita_botoes")
