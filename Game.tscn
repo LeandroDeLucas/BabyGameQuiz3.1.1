@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://fundo.tscn" type="PackedScene" id=2]
@@ -6,12 +6,11 @@
 [ext_resource path="res://Assets/Imagens/menu.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Imagens/btnOuvir.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Sons/Animais/ptBr/6.wav" type="AudioStream" id=7]
-[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=10]
-[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=11]
-[ext_resource path="res://estiloBotoesAzuis.tres" type="StyleBox" id=12]
+[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Imagens/silhueta.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=10]
+[ext_resource path="res://estiloBotoesAzuis.tres" type="StyleBox" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -19,7 +18,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -78,14 +77,13 @@ stream = ExtResource( 6 )
 [node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
 
 [node name="somElemento" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
 
 [node name="somRespostaCerta" type="AudioStreamPlayer" parent="."]
 
 [node name="somRespostaErrada" type="AudioStreamPlayer" parent="."]
 
 [node name="somAudiencia" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 7 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]
 position = Vector2( 217.18, 590.553 )
@@ -97,18 +95,18 @@ wait_time = 3.0
 one_shot = true
 
 [node name="somErro" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 9 )
 pitch_scale = 2.0
 
 [node name="somFim" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource( 10 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = 102.0
 margin_top = 432.0
 margin_right = 747.0
 margin_bottom = 463.0
-custom_styles/fg = ExtResource( 12 )
+custom_styles/fg = ExtResource( 11 )
 max_value = 25.0
 step = 1.0
 value = 15.0
