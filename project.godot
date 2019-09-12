@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="BabyGameQuiz"
-run/main_scene="res://SelecaoIdioma.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Cenas/SelecaoIdioma.tscn"
+config/icon="res://Assets/Imagens/Interface/icon.png"
 
 [display]
 
