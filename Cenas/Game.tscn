@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/fundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Imagens/Interface/menu.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Imagens/Interface/btnOuvir.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Imagens/Interface/silhueta.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=10]
+[ext_resource path="res://estiloBotoesAzuis.tres" type="StyleBox" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fundo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 410.721, 240 )
+
+[node name="btn0" type="TextureButton" parent="."]
+margin_left = 428.0
+margin_top = 85.0
+margin_right = 548.0
+margin_bottom = 205.0
+
+[node name="btn1" type="TextureButton" parent="."]
+margin_left = 630.0
+margin_top = 85.0
+margin_right = 750.0
+margin_bottom = 205.0
+
+[node name="btn2" type="TextureButton" parent="."]
+margin_left = 428.0
+margin_top = 280.0
+margin_right = 548.0
+margin_bottom = 400.0
+
+[node name="btn3" type="TextureButton" parent="."]
+margin_left = 630.0
+margin_top = 280.0
+margin_right = 750.0
+margin_bottom = 400.0
+
+[node name="btnVoltar" type="Button" parent="."]
+margin_left = 13.5778
+margin_top = 408.673
+margin_right = 75.5778
+margin_bottom = 464.673
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="btnOuvir" type="Button" parent="."]
+margin_left = 768.426
+margin_top = 194.0
+margin_right = 827.426
+margin_bottom = 280.0
+icon = ExtResource( 5 )
+flat = true
+
+[node name="somOndeEsta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
+
+[node name="somElemento" type="AudioStreamPlayer" parent="."]
+
+[node name="somRespostaCerta" type="AudioStreamPlayer" parent="."]
+
+[node name="somRespostaErrada" type="AudioStreamPlayer" parent="."]
+
+[node name="somAudiencia" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="aniAudiencia" type="AnimatedSprite" parent="."]
+position = Vector2( 217.18, 590.553 )
+scale = Vector2( 0.873382, 0.965306 )
+frames = SubResource( 2 )
+
+[node name="timFim" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="somErro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+pitch_scale = 2.0
+
+[node name="somFim" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 102.0
+margin_top = 432.0
+margin_right = 747.0
+margin_bottom = 463.0
+custom_styles/fg = ExtResource( 11 )
+max_value = 25.0
+step = 1.0
+percent_visible = false
+[connection signal="pressed" from="btn0" to="." method="_on_btn0_pressed"]
+[connection signal="pressed" from="btn1" to="." method="_on_btn1_pressed"]
+[connection signal="pressed" from="btn2" to="." method="_on_btn2_pressed"]
+[connection signal="pressed" from="btn3" to="." method="_on_btn3_pressed"]
+[connection signal="pressed" from="btnVoltar" to="." method="_on_btnVoltar_pressed"]
+[connection signal="pressed" from="btnOuvir" to="." method="_on_btnOuvir_pressed"]
+[connection signal="finished" from="somOndeEsta" to="." method="_on_somOndeEsta_finished"]
+[connection signal="finished" from="somTipoElemento" to="." method="_on_somTipoElemento_finished"]
+[connection signal="timeout" from="timFim" to="." method="_on_timFim_timeout"]
