@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/SelecaoTipo.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/fundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Fundo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://estiloBotoesPressionados.tres" type="StyleBox" id=3]
 [ext_resource path="res://estiloBotoesNormalAzul.tres" type="StyleBox" id=4]
 [ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=5]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Imagens/Interface/btnAlimentos.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Imagens/Interface/linguagem.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Sons/click.wav" type="AudioStream" id=13]
+
 
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0.486275, 0.0823529, 0.0823529, 1 )

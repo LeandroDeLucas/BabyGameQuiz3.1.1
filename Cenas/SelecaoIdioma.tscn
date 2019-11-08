@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/SelecaoIdioma.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/fundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Fundo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Imagens/Interface/flagBrasil.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Imagens/Interface/flagEspanha.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Imagens/Interface/flagEUA.png" type="Texture" id=5]

@@ -43,27 +43,27 @@ func _defineJogo(jogo):
 		"Animais":
 			imagemPath = "res://Assets/Imagens/Animais/"
 			somPath = "res://Assets/Sons/Animais/"
-			$fundo/AnimatedSprite.play("jogoAnimais")
+			$Fundo/AnimatedSprite.play("jogoAnimais")
 		"Cores":
 			imagemPath = "res://Assets/Imagens/Cores/"
 			somPath = "res://Assets/Sons/Cores/"
-			$fundo/AnimatedSprite.play("jogoAnimais")
+			$Fundo/AnimatedSprite.play("jogoAnimais")
 		"Frutas":
 			imagemPath = "res://Assets/Imagens/Frutas/"
 			somPath  = "res://Assets/Sons/Frutas/"
-			$fundo/AnimatedSprite.play("jogoAlimentos")
+			$Fundo/AnimatedSprite.play("jogoAlimentos")
 		"Letras":
 			imagemPath = "res://Assets/Imagens/Letras/"
 			somPath = "res://Assets/Sons/Letras/"
-			$fundo/AnimatedSprite.play("jogoLetras")
+			$Fundo/AnimatedSprite.play("jogoLetras")
 		"Numeros":
 			imagemPath = "res://Assets/Imagens/Numeros/"
 			somPath = "res://Assets/Sons/Numeros/"
-			$fundo/AnimatedSprite.play("jogoAlimentos")
+			$Fundo/AnimatedSprite.play("jogoAlimentos")
 		"Alimentos":
 			imagemPath = "res://Assets/Imagens/Alimentos/"
 			somPath = "res://Assets/Sons/Alimentos/"
-			$fundo/AnimatedSprite.play("jogoAlimentos")
+			$Fundo/AnimatedSprite.play("jogoAlimentos")
 	_encontrarElementos(imagemPath)
 
 func _defineElementos():
@@ -140,8 +140,8 @@ func _on_somTipoElemento_finished():
 	$somElemento.play()
 
 func _process(delta):
-	if move == true and $aniAudiencia.position.y > 400:
-		$aniAudiencia.move_local_y(-25, true)
+	if move == true and $aniAudiencia.position.y > 366:
+		$aniAudiencia.move_local_y(-20, true)
 
 func _on_btnOuvir_pressed():
 	_pergunta()
@@ -167,7 +167,7 @@ func _habilitaBotoes():
 	$btnVoltar.set("disabled", false)
 
 func _baloes():
-	var balao = preload("res://Cenas/Ballon.tscn")
+	var balao = preload("res://Cenas/Balao.tscn")
 	$somFim.play()
 	for i in rand_range(20,30):
 		var baloes = balao.instance()

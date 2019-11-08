@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/Balloon.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Balao.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Imagens/Balao/balao.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Imagens/Balao/linha1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Imagens/Balao/linha2.png" type="Texture" id=4]
