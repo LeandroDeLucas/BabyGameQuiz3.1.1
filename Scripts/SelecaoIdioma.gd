@@ -4,7 +4,7 @@ var selecaoTipo = preload("res://Cenas/SelecaoTipo.tscn")
 var lingua = "ptBr"
 
 func _ready():
-	$fundo/AnimatedSprite.play("selecaoLinguagem")
+	$Fundo/AnimatedSprite.play("selecaoLinguagem")
 	$somBg.play()
 	$btnEspanhol.set_modulate("a4a4a4")
 	$btnIngles.set_modulate("a4a4a4")

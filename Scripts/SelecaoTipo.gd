@@ -1,8 +1,8 @@
 extends Node2D
 
 func _ready():
-	$fundo/AnimatedSprite.play("selecaoTipo")
-
+	$Fundo/AnimatedSprite.play("selecaoTipo")
+	
 func _defineIdioma(idioma):
 	if idioma == "ptBr":
 		$btnAnimais.text = "ANIMAIS"

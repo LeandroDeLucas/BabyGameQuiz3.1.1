@@ -57,7 +57,7 @@ font_data = ExtResource( 6 )
 [node name="selecaoIdioma" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="fundo" parent="." instance=ExtResource( 2 )]
+[node name="Fundo" parent="." instance=ExtResource( 2 )]
 
 [node name="rtgSelecao" type="ColorRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0.831373 )
