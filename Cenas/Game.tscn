@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Fonts/COOPBL.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Imagens/Interface/menu.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Imagens/Interface/btnOuvir.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sons/ptbrOnde.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sons/Alimentos/ptBr/batatafrita.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Sons/audiencia.wav" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Sons/erro.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Sons/Animacao/Fim.wav" type="AudioStream" id=9]
@@ -67,19 +67,19 @@ icon = ExtResource( 4 )
 flat = true
 
 [node name="btnOuvir" type="Button" parent="."]
-margin_left = 768.426
-margin_top = 194.0
-margin_right = 827.426
-margin_bottom = 280.0
+margin_left = 162.0
+margin_top = 234.0
+margin_right = 361.0
+margin_bottom = 483.0
 icon = ExtResource( 5 )
 flat = true
 
 [node name="somOndeEsta" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
 
 [node name="somTipoElemento" type="AudioStreamPlayer" parent="."]
 
 [node name="somElemento" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [node name="somRespostaCerta" type="AudioStreamPlayer" parent="."]
 

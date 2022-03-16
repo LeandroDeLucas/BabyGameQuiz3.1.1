@@ -14,11 +14,11 @@ scale = Vector2( 0.504842, 0.525824 )
 texture = ExtResource( 2 )
 
 [node name="nuvem1" type="Sprite" parent="."]
-position = Vector2( 901.112, 40.9287 )
-scale = Vector2( 0.853492, 0.763653 )
+position = Vector2( 891.681, 32.7836 )
+scale = Vector2( 0.743186, 0.609972 )
 texture = ExtResource( 3 )
 
 [node name="nuvem2" type="Sprite" parent="."]
-position = Vector2( 912.929, 47.2563 )
-scale = Vector2( 0.503172, 0.538501 )
+position = Vector2( 930.505, 31.8235 )
+scale = Vector2( 0.446194, 0.436969 )
 texture = ExtResource( 4 )

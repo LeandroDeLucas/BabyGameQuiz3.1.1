@@ -81,10 +81,10 @@ func _on_btnBg_pressed():
 	$somClick.play()
 	if $somBg.playing :
 		$somBg.stop()
-		$btnBg.set_button_icon(load("res://Assets/Imagens/btnPlayBg.png"))
+		$btnBg.set_button_icon(load("res://Assets/Imagens/Interface/btnPlayBg.png"))
 	else:
 		$somBg.play()
-		$btnBg.set_button_icon(load("res://Assets/Imagens/btnMuteBg.png"))
+		$btnBg.set_button_icon(load("res://Assets/Imagens/Interface/btnMuteBg.png"))
 
 func _on_btnSair_pressed():
 	get_tree().quit()

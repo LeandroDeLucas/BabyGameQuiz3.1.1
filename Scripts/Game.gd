@@ -1,6 +1,6 @@
 extends Node2D
 
-#cotador do número de botões na tela 
+#contador do número de botões na tela 
 const numBotoes :int = 4
 var imagemPath: String 
 var somPath: String 
@@ -32,11 +32,11 @@ func _defineIdioma(idioma):
 	lingua = idioma
 	match(lingua):
 		"ptBr":
-			$somOndeEsta.stream = load("res://Assets/Sons/ptbrOnde.wav")
+			$somOndeEsta.stream = load("res://Assets/Sons/ptbrOnde.ogg")
 		"es":
-			$somOndeEsta.stream = load("res://Assets/Sons/esOnde.wav")
+			$somOndeEsta.stream = load("res://Assets/Sons/esOnde.ogg")
 		"enUs":
-			$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.wav")
+			$somOndeEsta.stream = load("res://Assets/Sons/enUsOnde.ogg")
 
 func _defineJogo(jogo):
 	match(jogo):
@@ -80,9 +80,9 @@ func _defineElementos():
 		respostaCerta = randi() % numBotoes
 	
 	ultimoElmento = elementosEncontrados[respostaCerta]
-	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.wav")
-	$somElemento.stream = load(somPath + lingua + "/" + elementosEncontrados[respostaCerta].replace(".png", ".wav"))
-		
+	$somTipoElemento.stream = load(somPath + lingua + "/tipoElemento.ogg")
+	$somElemento.stream = load(somPath + lingua + "/" + elementosEncontrados[respostaCerta].replace(".png", ".ogg"))
+	
 func _on_btn0_pressed():
 	_verifica(0)
 
@@ -131,7 +131,7 @@ func _on_btnVoltar_pressed():
 
 func _on_somOndeEsta_finished():
 	var somTipoElementoCheck = File.new()
-	if somTipoElementoCheck.file_exists(somPath + lingua + "/tipoElemento.wav"):
+	if somTipoElementoCheck.file_exists(somPath + lingua + "/tipoElemento.ogg"):
 		$somTipoElemento.play()
 	else:
 		$somElemento.play()
