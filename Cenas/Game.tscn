@@ -17,7 +17,6 @@ size = 30
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.964706, 0.027451, 0.027451, 1 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -31,7 +30,7 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="Fundo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 410.721, 240 )
+position = Vector2( 410.721, 238.708 )
 
 [node name="btn0" type="TextureButton" parent="."]
 margin_left = 428.0
@@ -67,10 +66,10 @@ icon = ExtResource( 4 )
 flat = true
 
 [node name="btnOuvir" type="Button" parent="."]
-margin_left = 162.0
-margin_top = 234.0
-margin_right = 361.0
-margin_bottom = 483.0
+margin_left = 107.028
+margin_top = 224.951
+margin_right = 307.028
+margin_bottom = 480.951
 icon = ExtResource( 5 )
 flat = true
 
@@ -104,18 +103,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 307.0
-margin_top = 420.0
-margin_right = 807.0
-margin_bottom = 473.0
-custom_styles/fg = SubResource( 2 )
+margin_left = 12.0
+margin_top = 23.0
+margin_right = 307.0
+margin_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+custom_styles/bg = SubResource( 2 )
 max_value = 25.0
 step = 1.0
 percent_visible = false
 
 [node name="FrenteBarraProgresso" type="Sprite" parent="."]
-position = Vector2( 556.632, 446.116 )
-scale = Vector2( 0.878378, 0.733333 )
+position = Vector2( 159.521, 43.6843 )
+scale = Vector2( 0.500682, 0.418005 )
 texture = ExtResource( 10 )
 
 [node name="aniAudiencia" type="AnimatedSprite" parent="."]

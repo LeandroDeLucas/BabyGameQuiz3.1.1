@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	$Fundo/AnimatedSprite.play("selecaoTipo")
+	$lblPontuacao.text = str(Global.pontuacaoGeral)
 	
 func _defineIdioma(idioma):
 	if idioma == "ptBr":

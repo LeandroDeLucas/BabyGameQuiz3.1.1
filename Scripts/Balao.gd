@@ -25,4 +25,5 @@ func _on_balloon_pressed():
 	$balloon.set_normal_texture(load("res://Assets/Imagens/Balao/popBalao.png"))
 	poped = true
 	$balloon/pop.play()
+	Global.pontuacaoGeral += 1
 

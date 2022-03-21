@@ -10,6 +10,7 @@ func _ready():
 	$btnIngles.set_modulate("a4a4a4")
 	$rtgSelecao.margin_left = $btnPortugues.margin_left
 	$rtgSelecao.margin_right = $rtgSelecao.margin_left + 162
+	Global.load_score()
 
 func _on_btnPortugues_pressed():
 	$somClick.play()
