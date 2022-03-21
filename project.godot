@@ -19,10 +19,6 @@ config/name="BabyGameQuiz"
 run/main_scene="res://Cenas/SelecaoIdioma.tscn"
 config/icon="res://Assets/Imagens/Interface/icon.png"
 
-[autoload]
-
-Global="*res://Scripts/Global.gd"
-
 [display]
 
 window/size/width=820
