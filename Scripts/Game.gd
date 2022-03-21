@@ -14,6 +14,7 @@ var respostaCerta: int
 var move = false
 var score:int
 var tentativa:int
+var fimJogo = false;
 
 func _ready():
 	randomize()
@@ -125,6 +126,7 @@ func _verifica(var resposta):
 		get_node("btn"+str(resposta)).set("modulate","3e3e3e")
 	
 func _on_btnVoltar_pressed():
+	Global.save_score()
 	self.get_parent().call("_habilita_botoes")
 	self.get_parent().call("_on_btnOk_pressed")
 	self.queue_free()
@@ -149,7 +151,10 @@ func _on_btnOuvir_pressed():
 func _on_timFim_timeout():
 	$timFim.wait_time = 0.1
 	if get_tree().get_nodes_in_group("grpBaloes").size() == 0:
-		_novo_jogo()
+		if fimJogo == false:
+			_novo_jogo()
+		else:
+			_on_btnVoltar_pressed()
 	else:
 		$timFim.start()
 	
@@ -174,6 +179,7 @@ func _baloes():
 		baloes.position.x = rand_range(-400,350)
 		add_child(baloes)
 		baloes.add_to_group("grpBaloes")
+	fimJogo = true;
 
 func _encontrarElementos(var path):
 	numOpcoes = -1

@@ -138,6 +138,19 @@ flat = true
 
 [node name="somClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+
+[node name="lblPontuacao" type="Label" parent="."]
+margin_left = 617.62
+margin_top = 428.411
+margin_right = 763.62
+margin_bottom = 466.411
+custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0
+"
+align = 2
+valign = 1
 [connection signal="pressed" from="btnAnimais" to="." method="_on_btnAnimais_pressed"]
 [connection signal="pressed" from="btnCores" to="." method="_on_btnCores_pressed"]
 [connection signal="pressed" from="btnLetras" to="." method="_on_btnLetras_pressed"]
