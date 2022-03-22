@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tipoElemento.ogg-9d6e97c868aed8f1092ee483f18f2edf.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Letras/enUs/tipoElemento.ogg"
+dest_files=[ "res://.import/tipoElemento.ogg-9d6e97c868aed8f1092ee483f18f2edf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

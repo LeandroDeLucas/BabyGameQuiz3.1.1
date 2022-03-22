@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/goiaba.ogg-bb674c25544c5a1fba68821aab2395d3.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/es/goiaba.ogg"
+dest_files=[ "res://.import/goiaba.ogg-bb674c25544c5a1fba68821aab2395d3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cebola.ogg-6839e00044832ae188bb50e58cb550b4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/cebola.ogg"
+dest_files=[ "res://.import/cebola.ogg-6839e00044832ae188bb50e58cb550b4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

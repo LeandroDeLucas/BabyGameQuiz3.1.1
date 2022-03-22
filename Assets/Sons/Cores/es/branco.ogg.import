@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/branco.ogg-8bc35443e06789801b6b4a96b31c120f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/es/branco.ogg"
+dest_files=[ "res://.import/branco.ogg-8bc35443e06789801b6b4a96b31c120f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

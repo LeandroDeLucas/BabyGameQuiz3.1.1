@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/8.ogg-c926f86041cf29d106a1dad3dddf3729.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Numeros/es/8.ogg"
+dest_files=[ "res://.import/8.ogg-c926f86041cf29d106a1dad3dddf3729.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

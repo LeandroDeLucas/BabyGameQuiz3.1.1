@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bolo.ogg-ccac4db9e258cfb8ac97bbd229444973.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/es/bolo.ogg"
+dest_files=[ "res://.import/bolo.ogg-ccac4db9e258cfb8ac97bbd229444973.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

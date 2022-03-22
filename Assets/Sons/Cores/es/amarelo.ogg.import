@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/amarelo.ogg-6aa668ec282d424f6aa543a6e7d92feb.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/es/amarelo.ogg"
+dest_files=[ "res://.import/amarelo.ogg-6aa668ec282d424f6aa543a6e7d92feb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

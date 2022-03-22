@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gato.ogg-5ecc019f27a7f057bb361074f7ef33eb.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/enUs/gato.ogg"
+dest_files=[ "res://.import/gato.ogg-5ecc019f27a7f057bb361074f7ef33eb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

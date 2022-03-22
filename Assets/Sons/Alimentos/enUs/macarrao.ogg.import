@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/macarrao.ogg-22f7259d99b6b746ce7dad70765229c2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/macarrao.ogg"
+dest_files=[ "res://.import/macarrao.ogg-22f7259d99b6b746ce7dad70765229c2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/abacate.ogg-a3e065d1648a3353585ee8808cf18b45.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/abacate.ogg"
+dest_files=[ "res://.import/abacate.ogg-a3e065d1648a3353585ee8808cf18b45.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

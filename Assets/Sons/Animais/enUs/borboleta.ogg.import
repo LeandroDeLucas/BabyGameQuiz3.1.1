@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/borboleta.ogg-3bf2184525a8c5454ab373ddb442ca0c.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/enUs/borboleta.ogg"
+dest_files=[ "res://.import/borboleta.ogg-3bf2184525a8c5454ab373ddb442ca0c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/salada.ogg-0712ed383019abde65140777d990a65c.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/es/salada.ogg"
+dest_files=[ "res://.import/salada.ogg-0712ed383019abde65140777d990a65c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

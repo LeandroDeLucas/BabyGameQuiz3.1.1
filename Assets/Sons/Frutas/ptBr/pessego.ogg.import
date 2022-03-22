@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pessego.ogg-e1a631ed3c10d454ad3d6d61979bc41c.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/pessego.ogg"
+dest_files=[ "res://.import/pessego.ogg-e1a631ed3c10d454ad3d6d61979bc41c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

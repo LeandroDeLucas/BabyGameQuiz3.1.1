@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/esOnde.ogg-0f85e8a491a5716a5562cbe570d07e8b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/esOnde.ogg"
+dest_files=[ "res://.import/esOnde.ogg-0f85e8a491a5716a5562cbe570d07e8b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

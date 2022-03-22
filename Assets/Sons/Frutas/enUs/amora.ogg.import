@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/amora.ogg-5e398b0f5dff74936d868e91904a4f1f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/enUs/amora.ogg"
+dest_files=[ "res://.import/amora.ogg-5e398b0f5dff74936d868e91904a4f1f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

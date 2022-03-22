@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rosa.ogg-4d8dda8396bbfc75b9d2493c23bb9fda.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/enUs/rosa.ogg"
+dest_files=[ "res://.import/rosa.ogg-4d8dda8396bbfc75b9d2493c23bb9fda.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

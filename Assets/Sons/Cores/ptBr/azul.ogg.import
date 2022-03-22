@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/azul.ogg-51e8c32ebb4b832aa278f838971401d2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/ptBr/azul.ogg"
+dest_files=[ "res://.import/azul.ogg-51e8c32ebb4b832aa278f838971401d2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/abacaxi.ogg-785c300c79981e05a2f5641f3cf3ec15.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/es/abacaxi.ogg"
+dest_files=[ "res://.import/abacaxi.ogg-785c300c79981e05a2f5641f3cf3ec15.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

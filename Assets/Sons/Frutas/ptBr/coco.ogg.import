@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/coco.ogg-460571c8c225fc5321fd0905ca3b8d6e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/coco.ogg"
+dest_files=[ "res://.import/coco.ogg-460571c8c225fc5321fd0905ca3b8d6e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

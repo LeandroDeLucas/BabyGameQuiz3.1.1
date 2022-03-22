@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/balloonPop.wav-2d06d670b69a2a2fee53d0f4888b3b47.sample"
+
+[deps]
+
+source_file="res://Assets/Sons/Animacao/balloonPop.wav"
+dest_files=[ "res://.import/balloonPop.wav-2d06d670b69a2a2fee53d0f4888b3b47.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

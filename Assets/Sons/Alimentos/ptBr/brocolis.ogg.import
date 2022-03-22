@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/brocolis.ogg-b7cd4b01d0f56a6374bd5a5d53faf409.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/ptBr/brocolis.ogg"
+dest_files=[ "res://.import/brocolis.ogg-b7cd4b01d0f56a6374bd5a5d53faf409.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

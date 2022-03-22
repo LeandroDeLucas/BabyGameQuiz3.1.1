@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pipoca.ogg-8ae549a518c4c827be82cd44ccb7524b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/ptBr/pipoca.ogg"
+dest_files=[ "res://.import/pipoca.ogg-8ae549a518c4c827be82cd44ccb7524b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

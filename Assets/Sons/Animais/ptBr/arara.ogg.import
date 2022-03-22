@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/arara.ogg-0048fb6cdf58bca4c389800074365e6d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/ptBr/arara.ogg"
+dest_files=[ "res://.import/arara.ogg-0048fb6cdf58bca4c389800074365e6d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

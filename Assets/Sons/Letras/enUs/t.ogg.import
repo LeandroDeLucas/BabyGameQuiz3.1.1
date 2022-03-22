@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/t.ogg-d8cd5d635242886de8a113f60719f3e2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Letras/enUs/t.ogg"
+dest_files=[ "res://.import/t.ogg-d8cd5d635242886de8a113f60719f3e2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

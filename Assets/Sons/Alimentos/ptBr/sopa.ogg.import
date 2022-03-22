@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sopa.ogg-9c6719c4b47ee61ca0f28d4070b35b7e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/ptBr/sopa.ogg"
+dest_files=[ "res://.import/sopa.ogg-9c6719c4b47ee61ca0f28d4070b35b7e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

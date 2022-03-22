@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cachorro.ogg-2a202a60e5fb880a2746e3852cd46a78.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/enUs/cachorro.ogg"
+dest_files=[ "res://.import/cachorro.ogg-2a202a60e5fb880a2746e3852cd46a78.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

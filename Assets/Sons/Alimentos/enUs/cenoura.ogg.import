@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cenoura.ogg-8cd46ce69e67a3f4113add1673fccf9f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/cenoura.ogg"
+dest_files=[ "res://.import/cenoura.ogg-8cd46ce69e67a3f4113add1673fccf9f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vermelho.ogg-a9c86ac37fa67dc82206b7ca61a034f4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/enUs/vermelho.ogg"
+dest_files=[ "res://.import/vermelho.ogg-a9c86ac37fa67dc82206b7ca61a034f4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

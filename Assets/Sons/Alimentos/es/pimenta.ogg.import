@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pimenta.ogg-92415cca994970c8ba983eccaded07a7.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/es/pimenta.ogg"
+dest_files=[ "res://.import/pimenta.ogg-92415cca994970c8ba983eccaded07a7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

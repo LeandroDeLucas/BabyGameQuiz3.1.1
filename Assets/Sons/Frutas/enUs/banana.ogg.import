@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/banana.ogg-0158f577bc4280b1080673e04a6ef4aa.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/enUs/banana.ogg"
+dest_files=[ "res://.import/banana.ogg-0158f577bc4280b1080673e04a6ef4aa.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

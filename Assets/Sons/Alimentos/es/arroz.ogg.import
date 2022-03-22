@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/arroz.ogg-668c3f62b3693f0cc351ef9023f71e38.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/es/arroz.ogg"
+dest_files=[ "res://.import/arroz.ogg-668c3f62b3693f0cc351ef9023f71e38.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

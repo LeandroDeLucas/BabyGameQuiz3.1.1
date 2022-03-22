@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/melancia.ogg-2aed4c81a4a668e88242889a8ee9675d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/es/melancia.ogg"
+dest_files=[ "res://.import/melancia.ogg-2aed4c81a4a668e88242889a8ee9675d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pizza.ogg-008a5d849edb30cc7fcd3f5bc876ee32.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/pizza.ogg"
+dest_files=[ "res://.import/pizza.ogg-008a5d849edb30cc7fcd3f5bc876ee32.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/milho.ogg-72c4d04c3507f3adc54911b476f06ca8.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/milho.ogg"
+dest_files=[ "res://.import/milho.ogg-72c4d04c3507f3adc54911b476f06ca8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

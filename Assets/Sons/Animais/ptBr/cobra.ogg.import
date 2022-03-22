@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cobra.ogg-2a274d5fea75aa5ff16af9046e690d4a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/ptBr/cobra.ogg"
+dest_files=[ "res://.import/cobra.ogg-2a274d5fea75aa5ff16af9046e690d4a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

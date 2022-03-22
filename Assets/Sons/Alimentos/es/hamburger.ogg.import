@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hamburger.ogg-4e0ad85ac97587e3603de4a5381fb295.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/es/hamburger.ogg"
+dest_files=[ "res://.import/hamburger.ogg-4e0ad85ac97587e3603de4a5381fb295.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

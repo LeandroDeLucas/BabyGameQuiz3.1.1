@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/elefante.ogg-ed5da82a9751b7441e7dbde838a9c02a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/enUs/elefante.ogg"
+dest_files=[ "res://.import/elefante.ogg-ed5da82a9751b7441e7dbde838a9c02a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

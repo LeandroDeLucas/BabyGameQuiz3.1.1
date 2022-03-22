@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/laranja.ogg-ae271abc17ef4b296dc438b1cce86c1f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/es/laranja.ogg"
+dest_files=[ "res://.import/laranja.ogg-ae271abc17ef4b296dc438b1cce86c1f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

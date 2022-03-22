@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/1.ogg-bdb128907cb51f60e6b71ebaf6fc229b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Numeros/ptBr/1.ogg"
+dest_files=[ "res://.import/1.ogg-bdb128907cb51f60e6b71ebaf6fc229b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

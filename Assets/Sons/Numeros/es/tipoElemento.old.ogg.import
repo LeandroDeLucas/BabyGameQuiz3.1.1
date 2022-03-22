@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tipoElemento.old.ogg-49532b3fabb0673473e3d4ef2ad0fe27.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Numeros/es/tipoElemento.old.ogg"
+dest_files=[ "res://.import/tipoElemento.old.ogg-49532b3fabb0673473e3d4ef2ad0fe27.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

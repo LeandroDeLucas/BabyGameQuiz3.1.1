@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/maca.ogg-44801873441588446fded28357c91b67.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/enUs/maca.ogg"
+dest_files=[ "res://.import/maca.ogg-44801873441588446fded28357c91b67.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

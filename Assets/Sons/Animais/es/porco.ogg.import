@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/porco.ogg-4d5cfa9290a0433770e469cf34d3a2bc.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Animais/es/porco.ogg"
+dest_files=[ "res://.import/porco.ogg-4d5cfa9290a0433770e469cf34d3a2bc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

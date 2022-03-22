@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/frango.ogg-93c8b0e63eba5d00086763656568ce55.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Alimentos/enUs/frango.ogg"
+dest_files=[ "res://.import/frango.ogg-93c8b0e63eba5d00086763656568ce55.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

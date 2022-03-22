@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/laranja.ogg-50888e66b904045fc5a68824f47e1857.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/es/laranja.ogg"
+dest_files=[ "res://.import/laranja.ogg-50888e66b904045fc5a68824f47e1857.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

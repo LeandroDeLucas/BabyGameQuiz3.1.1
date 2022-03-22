@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/i.ogg-024ddc3ecc9822eae2dc9fa1c32a7ded.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Letras/ptBr/i.ogg"
+dest_files=[ "res://.import/i.ogg-024ddc3ecc9822eae2dc9fa1c32a7ded.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

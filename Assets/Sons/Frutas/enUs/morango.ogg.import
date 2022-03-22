@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/morango.ogg-2cc8e854b6738bce61d98eff71a95a3b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/enUs/morango.ogg"
+dest_files=[ "res://.import/morango.ogg-2cc8e854b6738bce61d98eff71a95a3b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

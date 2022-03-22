@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/uva.ogg-f91d6afaa16cd03e0d58ecb6054d2ac6.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Frutas/ptBr/uva.ogg"
+dest_files=[ "res://.import/uva.ogg-f91d6afaa16cd03e0d58ecb6054d2ac6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/preto.ogg-8b5f28a113147718728014e9f13d7c16.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sons/Cores/enUs/preto.ogg"
+dest_files=[ "res://.import/preto.ogg-8b5f28a113147718728014e9f13d7c16.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
